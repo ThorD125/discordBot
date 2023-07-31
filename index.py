@@ -27,8 +27,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('ping'):
-        await message.channel.send('pong !')
+    if message.content.startswith('pong'):
+        await message.channel.send('ping !')
 
 # Run the bot with the provided token
 client.run(TOKEN)
