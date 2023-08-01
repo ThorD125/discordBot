@@ -99,7 +99,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    if message.content.startswith('ping'):\n        await message.channel.send('pong !')",
+        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    if message.content.startswith('dbtest'):\n        await message.channel.send(get_list_from_mariadb())",
         "detail": "index",
         "documentation": {}
     },
@@ -108,7 +108,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "client = commands.Bot(command_prefix='!', intents=intents)\n@client.command()\nasync def ping(ctx):\n    # Your custom command logic goes here\n    await ctx.send(\"pong!\")\n# Run the bot with the provided token\nclient.run(TOKEN)",
+        "peekOfCode": "client = commands.Bot(command_prefix='!', intents=intents)\n@client.command()\nasync def ping(ctx):\n    print(ctx)\n    await ctx.send(\"pong!\")\n# Run the bot with the provided token\nclient.run(TOKEN)",
         "detail": "index",
         "documentation": {}
     }
