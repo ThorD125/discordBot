@@ -32,8 +32,6 @@ async def on_message(message):
     if message.content.startswith('pong'):
         await message.channel.send('ping !')
 
-    print(get_list_from_mariadb())
-
     if message.content.startswith('dbtest'):
         await message.channel.send(get_list_from_mariadb())
 
