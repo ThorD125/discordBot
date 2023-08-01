@@ -91,7 +91,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    if message.content.startswith('pong'):\n        await message.channel.send('ping !')",
+        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    if message.content.startswith('ping'):\n        await message.channel.send('pong !')",
         "detail": "index",
         "documentation": {}
     }
