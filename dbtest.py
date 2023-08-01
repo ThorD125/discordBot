@@ -23,7 +23,7 @@ def get_list_from_mariadb(column="*", table="text"):
 
         cursor = connection.cursor()
 
-        query = "SELECT {column} FROM {table};"
+        query = f"SELECT {column} FROM {table};"
         cursor.execute(query)
 
         result = cursor.fetchall()
