@@ -44,10 +44,18 @@
     },
     {
         "label": "get_list_from_mariadb",
+        "importPath": "dbtest",
+        "description": "dbtest",
+        "isExtraImport": true,
+        "detail": "dbtest",
+        "documentation": {}
+    },
+    {
+        "label": "get_list_from_mariadb",
         "kind": 2,
         "importPath": "dbtest",
         "description": "dbtest",
-        "peekOfCode": "def get_list_from_mariadb():\n    try:\n        # Replace these with your actual database credentials\n        load_dotenv()\n    # Get the bot token from the environment variable\n        host=os.getenv(\"host\")\n        user=os.getenv(\"user\")\n        password=os.getenv(\"password\")\n        database=os.getenv(\"database\")\n        if host is None or user is None or password is None or database is None:",
+        "peekOfCode": "def get_list_from_mariadb(column=\"*\", table=\"text\"):\n    try:\n        load_dotenv()\n        host=os.getenv(\"host\")\n        user=os.getenv(\"user\")\n        password=os.getenv(\"password\")\n        database=os.getenv(\"database\")\n        if host is None or user is None or password is None or database is None:\n            print(\"Error: Bot token not found in .env file.\")\n            exit(1)",
         "detail": "dbtest",
         "documentation": {}
     },

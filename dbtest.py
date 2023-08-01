@@ -2,13 +2,10 @@ import mysql.connector
 import os
 from dotenv import load_dotenv
 
-def get_list_from_mariadb():
+def get_list_from_mariadb(column="*", table="text"):
     try:
-        # Replace these with your actual database credentials
-        
         load_dotenv()
 
-    # Get the bot token from the environment variable
         host=os.getenv("host")
         user=os.getenv("user")
         password=os.getenv("password")
@@ -17,9 +14,6 @@ def get_list_from_mariadb():
             print("Error: Bot token not found in .env file.")
             exit(1)
 
-        
-
-        # Connect to the database
         connection = mysql.connector.connect(
             host=host,
             user=user,
@@ -27,23 +21,17 @@ def get_list_from_mariadb():
             database=database
         )
 
-        # Create a cursor object to interact with the database
         cursor = connection.cursor()
 
-        # Execute a SELECT query to retrieve the data
-        query = "SELECT * FROM text;"
+        query = "SELECT {column} FROM {table};"
         cursor.execute(query)
 
         result = cursor.fetchall()
 
-        # Close the cursor and connection
         cursor.close()
         connection.close()
 
-        # Extract the data from the result and return as a list
-        print(result)
-        data_list = [item[0] for item in result]
-        return data_list
+        return result
 
     except mysql.connector.Error as e:
         print(f"Error: {e}")

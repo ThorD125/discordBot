@@ -2,6 +2,8 @@ import discord
 import os
 from dotenv import load_dotenv
 
+from dbtest import get_list_from_mariadb
+
 # Load the environment variables from the .env file
 load_dotenv()
 
@@ -29,6 +31,9 @@ async def on_message(message):
 
     if message.content.startswith('pong'):
         await message.channel.send('ping !')
+
+    if message.content.startswith('dbtest'):
+        await message.channel.send(get_list_from_mariadb())
 
 # Run the bot with the provided token
 client.run(TOKEN)
