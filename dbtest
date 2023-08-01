@@ -1,0 +1,44 @@
+import mysql.connector
+
+def get_list_from_mariadb():
+    try:
+        # Replace these with your actual database credentials
+        host = "localhost"
+        user = "ther"
+        password = "ther"
+        database = "PIDBS"
+
+        # Connect to the database
+        connection = mysql.connector.connect(
+            host=host,
+            user=user,
+            password=password,
+            database=database
+        )
+
+        # Create a cursor object to interact with the database
+        cursor = connection.cursor()
+
+        # Execute a SELECT query to retrieve the data
+        query = "SELECT word FROM text;"
+        cursor.execute(query)
+
+        # Fetch all the rows as a list
+        result = cursor.fetchall()
+
+        # Close the cursor and connection
+        cursor.close()
+        connection.close()
+
+        # Extract the data from the result and return as a list
+        data_list = [item[0] for item in result]
+        return data_list
+
+    except mysql.connector.Error as e:
+        print(f"Error: {e}")
+        return []
+
+# Example usage
+if __name__ == "__main__":
+    data_list = get_list_from_mariadb()
+    print(data_list)
