@@ -29,11 +29,15 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('ping'):
-        await message.channel.send('pong !')
+    # if message.content.startswith('ping'):
+    #     await message.channel.send('pong !')
 
     if message.content.startswith('dbtest'):
         await message.channel.send(get_list_from_mariadb())
+
+@client.command()
+async def ping(ctx):
+    await ctx.send('pong !')
 
 # Run the bot with the provided token
 client.run(TOKEN)
