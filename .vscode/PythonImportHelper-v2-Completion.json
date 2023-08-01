@@ -51,6 +51,14 @@
         "documentation": {}
     },
     {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
         "label": "get_list_from_mariadb",
         "kind": 2,
         "importPath": "dbtest",
@@ -91,7 +99,16 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    # if message.content.startswith('ping'):\n    #     await message.channel.send('pong !')",
+        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    if message.content.startswith('ping'):\n        await message.channel.send('pong !')",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "bot",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "bot = commands.Bot(command_prefix='!', intents=intents)\n@bot.event\nasync def on_member_update(before, after):\n    # Check if the username has changed\n    if before.name != after.name:\n        # Add your desired prefix here\n        prefix = \"PREFIX_\"\n        new_username = prefix + after.name\n        try:\n            # Attempt to update the username",
         "detail": "index",
         "documentation": {}
     }
