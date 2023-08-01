@@ -1,5 +1,6 @@
+# basic info of project
 
-## .env file
+## .env file configuration
 
 ### discord
 
