@@ -38,22 +38,10 @@ async def on_message(message):
 
 client = commands.Bot(command_prefix='!', intents=intents)
 
-@client.event
-async def on_member_update(before, after):
-    # Check if the username has changed
-    if before.name != after.name:
-        # Add your desired prefix here
-        prefix = "PREFIX_"
-        new_username = prefix + after.name
-
-        try:
-            # Attempt to update the username
-            await after.edit(nick=new_username)
-        except discord.Forbidden:
-            print(f"Unable to change the username of {after.name} due to missing permissions.")
-        except discord.HTTPException:
-            print(f"An error occurred while changing the username of {after.name}.")
-
+@client.command()
+async def ping(ctx):
+    # Your custom command logic goes here
+    await ctx.send("pong!")
 
 # Run the bot with the provided token
 client.run(TOKEN)
