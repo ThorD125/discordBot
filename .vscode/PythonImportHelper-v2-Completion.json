@@ -1,0 +1,90 @@
+[
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "get_list_from_mariadb",
+        "kind": 2,
+        "importPath": "dbtest",
+        "description": "dbtest",
+        "peekOfCode": "def get_list_from_mariadb():\n    try:\n        # Replace these with your actual database credentials\n        load_dotenv()\n    # Get the bot token from the environment variable\n        host=os.getenv(\"host\")\n        user=os.getenv(\"user\")\n        password=os.getenv(\"password\")\n        database=os.getenv(\"database\")\n        if host is None or user is None or password is None or database is None:",
+        "detail": "dbtest",
+        "documentation": {}
+    },
+    {
+        "label": "TOKEN",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\n    exit(1)\n# Define the intents that your bot needs\nintents = discord.Intents.default()\nintents.message_content = True\n# Create a new Discord client with the specified intents\nclient = discord.Client(intents=intents)\n@client.event",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "intents",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\n# Create a new Discord client with the specified intents\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "intents.message_content",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "intents.message_content = True\n# Create a new Discord client with the specified intents\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    if message.content.startswith('pong'):\n        await message.channel.send('ping !')",
+        "detail": "index",
+        "documentation": {}
+    }
+]
