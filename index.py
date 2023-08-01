@@ -36,9 +36,9 @@ async def on_message(message):
     if message.content.startswith('dbtest'):
         await message.channel.send(get_list_from_mariadb())
 
-bot = commands.Bot(command_prefix='!', intents=intents)
+client = commands.Bot(command_prefix='!', intents=intents)
 
-@bot.event
+@client.event
 async def on_member_update(before, after):
     # Check if the username has changed
     if before.name != after.name:
