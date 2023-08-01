@@ -37,7 +37,6 @@ client = commands.Bot(command_prefix='!', intents=intents)
 
 @client.command()
 async def ping(ctx):
-    print(ctx)
     await ctx.send("pong!")
 
 # Run the bot with the provided token
