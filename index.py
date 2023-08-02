@@ -21,9 +21,11 @@ intents.message_content = True
 # Create a new Discord client with the specified intents
 client = discord.Client(intents=intents)
 
+
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
+
 
 @client.event
 async def on_message(message):
@@ -33,10 +35,12 @@ async def on_message(message):
     if message.content.startswith('dbtest'):
         await message.channel.send(get_list_from_mariadb())
 
-client = commands.Bot(command_prefix='!', intents=intents)
+client = commands.Bot(command_prefix='\\', intents=intents)
+
 
 @client.command()
 async def ping(ctx):
+    """This is a custom command."""
     await ctx.send("pong!")
 
 # Run the bot with the provided token
