@@ -38,10 +38,18 @@ client = commands.Bot(
 
 
 @client.command()
-async def ping(ctx, url=None):
+async def traceroute(ctx, url=None):
     if url is None:
         await ctx.send("pong!")
     else:
         await ctx.send(os.popen(f"ping -c 4 {url} ").read())
+
+
+@client.command()
+async def ping(ctx, url=None):
+    if url is None:
+        await ctx.send("Enter a URL to trace!")
+    else:
+        await ctx.send(os.popen(f"traceroute {url} ").read())
 
 client.run(TOKEN)
