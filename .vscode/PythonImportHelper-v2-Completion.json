@@ -43,19 +43,27 @@
         "documentation": {}
     },
     {
-        "label": "get_list_from_mariadb",
-        "importPath": "dbtest",
-        "description": "dbtest",
-        "isExtraImport": true,
-        "detail": "dbtest",
-        "documentation": {}
-    },
-    {
         "label": "commands",
         "importPath": "discord.ext",
         "description": "discord.ext",
         "isExtraImport": true,
         "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "SlashCommand",
+        "importPath": "discord_slash",
+        "description": "discord_slash",
+        "isExtraImport": true,
+        "detail": "discord_slash",
+        "documentation": {}
+    },
+    {
+        "label": "get_list_from_mariadb",
+        "importPath": "dbtest",
+        "description": "dbtest",
+        "isExtraImport": true,
+        "detail": "dbtest",
         "documentation": {}
     },
     {
@@ -72,7 +80,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\n    exit(1)\n# Define the intents that your bot needs\nintents = discord.Intents.default()\nintents.message_content = True\n# Create a new Discord client with the specified intents\nclient = discord.Client(intents=intents)\n@client.event",
+        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\n    exit(1)\nintents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')",
         "detail": "index",
         "documentation": {}
     },
@@ -81,7 +89,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\n# Create a new Discord client with the specified intents\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:",
+        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return",
         "detail": "index",
         "documentation": {}
     },
@@ -90,7 +98,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "intents.message_content = True\n# Create a new Discord client with the specified intents\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return",
+        "peekOfCode": "intents.message_content = True\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    # if message.content.startswith('dbtest'):",
         "detail": "index",
         "documentation": {}
     },
@@ -108,7 +116,16 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "client = commands.Bot(\n    command_prefix=commands.when_mentioned_or('/'), intents=intents)\n@client.slash_command()\nasync def ping(ctx):\n    \"\"\"Responds with pong!\"\"\"\n    await ctx.send(\"pong!\")\n# Run the bot with the provided token\nclient.run(TOKEN)",
+        "peekOfCode": "client = commands.Bot(\n    command_prefix=commands.when_mentioned_or('\\\\'), intents=intents)\nslash = SlashCommand(bot, sync_commands=True)\n@slash.slash(name=\"ping\", description=\"Responds with pong!\")\nasync def ping(ctx):\n    await ctx.send(\"pong!\")\nclient.run(TOKEN)",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "slash",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "slash = SlashCommand(bot, sync_commands=True)\n@slash.slash(name=\"ping\", description=\"Responds with pong!\")\nasync def ping(ctx):\n    await ctx.send(\"pong!\")\nclient.run(TOKEN)",
         "detail": "index",
         "documentation": {}
     }

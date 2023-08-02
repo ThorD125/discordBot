@@ -1,24 +1,22 @@
 import discord
+from discord.ext import commands
+from discord_slash import SlashCommand
+
 import os
 from dotenv import load_dotenv
 
 from dbtest import get_list_from_mariadb
-from discord.ext import commands
 
-# Load the environment variables from the .env file
 load_dotenv()
 
-# Get the bot token from the environment variable
 TOKEN = os.getenv('TOKEN')
 if TOKEN is None:
     print("Error: Bot token not found in .env file.")
     exit(1)
 
-# Define the intents that your bot needs
 intents = discord.Intents.default()
 intents.message_content = True
 
-# Create a new Discord client with the specified intents
 client = discord.Client(intents=intents)
 
 
@@ -36,13 +34,12 @@ async def on_message(message):
     #     await message.channel.send(get_list_from_mariadb())
 
 client = commands.Bot(
-    command_prefix=commands.when_mentioned_or('/'), intents=intents)
+    command_prefix=commands.when_mentioned_or('\\'), intents=intents)
+slash = SlashCommand(bot, sync_commands=True)
 
 
-@client.slash_command()
+@slash.slash(name="ping", description="Responds with pong!")
 async def ping(ctx):
-    """Responds with pong!"""
     await ctx.send("pong!")
 
-# Run the bot with the provided token
 client.run(TOKEN)
