@@ -1,1 +1,1 @@
-apt install traceroute -y
+apt install traceroute dnsutils -y
