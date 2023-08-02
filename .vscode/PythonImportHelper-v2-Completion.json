@@ -108,7 +108,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "client = commands.Bot(\n    command_prefix=commands.when_mentioned_or('/'), intents=intents)\n@client.command()\nasync def ping(ctx):\n    \"\"\"Responds with pong!\"\"\"\n    await ctx.send(\"pong!\")\n# Run the bot with the provided token\nclient.run(TOKEN)",
+        "peekOfCode": "client = commands.Bot(\n    command_prefix=commands.when_mentioned_or('/'), intents=intents)\n@client.slash_command\nasync def ping(ctx):\n    \"\"\"Responds with pong!\"\"\"\n    await ctx.send(\"pong!\")\n# Run the bot with the provided token\nclient.run(TOKEN)",
         "detail": "index",
         "documentation": {}
     }
