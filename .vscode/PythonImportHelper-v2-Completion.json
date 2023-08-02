@@ -72,7 +72,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\n    exit(1)\nintents = discord.Intents.default()\nintents.message_content = True\n# client = discord.Client(intents=intents)\nclient = commands.Bot(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.event",
+        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\n    exit(1)\nintents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.event\nasync def on_ready():",
         "detail": "index",
         "documentation": {}
     },
@@ -81,7 +81,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\n# client = discord.Client(intents=intents)\nclient = commands.Bot(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):",
+        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:",
         "detail": "index",
         "documentation": {}
     },
@@ -90,7 +90,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "intents.message_content = True\n# client = discord.Client(intents=intents)\nclient = commands.Bot(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:",
+        "peekOfCode": "intents.message_content = True\nclient = discord.Client(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return",
         "detail": "index",
         "documentation": {}
     },
@@ -99,7 +99,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "client = commands.Bot(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    # if message.content.startswith('dbtest'):",
+        "peekOfCode": "client = discord.Client(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    # if message.content.startswith('dbtest'):",
         "detail": "index",
         "documentation": {}
     }

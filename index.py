@@ -16,9 +16,7 @@ if TOKEN is None:
 intents = discord.Intents.default()
 intents.message_content = True
 
-# client = discord.Client(intents=intents)
-
-client = commands.Bot(
+client = discord.Client(
     command_prefix=commands.when_mentioned_or('!'), intents=intents)
 
 
