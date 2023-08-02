@@ -19,7 +19,7 @@ intents.message_content = True
 # client = discord.Client(intents=intents)
 
 client = commands.Bot(
-    command_prefix=commands.when_mentioned_or('\\'), intents=intents)
+    command_prefix=commands.when_mentioned_or('!'), intents=intents)
 
 
 @client.event
