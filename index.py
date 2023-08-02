@@ -36,17 +36,28 @@ client = commands.Bot(
 
 
 @client.command()
+async def help(ctx, url=None):
+    await ctx.send('''
+    !help - Show this message
+    !ping <url> - Ping a URL
+    !traceroute <url> - Traceroute a URL
+    !dnslookup <url> - DNS lookup a URL
+    !generatepassword <length> - Generate a password of length <length>
+    ''')
+
+
+@client.command()
 async def ping(ctx, url=None):
     if url is None:
-        await ctx.send("pong!")
+        await ctx.send("pong!", ephemeral=True)
     else:
-        await ctx.send(os.popen(f"ping -c 4 {url} ").read())
+        await ctx.send(os.popen(f"ping -c 4 {url} ").read(), ephemeral=True)
 
 
 @client.command()
 async def traceroute(ctx, url=None):
     if url is None:
-        await ctx.send("Enter a URL to trace!")
+        await ctx.send("Enter a URL to trace!", ephemeral=True)
     else:
         await ctx.send(os.popen(f"traceroute {url} ").read())
 
@@ -54,14 +65,14 @@ async def traceroute(ctx, url=None):
 @client.command()
 async def dnslookup(ctx, url=None):
     if url is None:
-        await ctx.send("Enter a URL to trace!")
+        await ctx.send("Enter a URL to trace!", ephemeral=True)
     else:
         await ctx.send(os.popen(f"dig {url}").read())
 
 
 @client.command()
 async def generatepassword(ctx, amount=20):
-    await ctx.send(os.popen(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {amount}").read())
+    await ctx.send(os.popen(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {amount}").read(), ephemeral=True)
 
 
 @client.command()

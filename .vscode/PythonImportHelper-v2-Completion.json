@@ -108,7 +108,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "client = commands.Bot(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.command()\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.send(\"pong!\")\n    else:\n        await ctx.send(os.popen(f\"ping -c 4 {url} \").read())\n@client.command()\nasync def traceroute(ctx, url=None):",
+        "peekOfCode": "client = commands.Bot(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.command()\nasync def help(ctx, url=None):\n    await ctx.send('''\n    !help - Show this message\n    !ping <url> - Ping a URL\n    !traceroute <url> - Traceroute a URL\n    !dnslookup <url> - DNS lookup a URL\n    !generatepassword <length> - Generate a password of length <length>",
         "detail": "index",
         "documentation": {}
     }
