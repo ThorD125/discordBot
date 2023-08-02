@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from discord_slash import SlashCommand
 
 import os
 from dotenv import load_dotenv
@@ -35,10 +34,9 @@ async def on_message(message):
 
 client = commands.Bot(
     command_prefix=commands.when_mentioned_or('\\'), intents=intents)
-slash = SlashCommand(bot, sync_commands=True)
 
 
-@slash.slash(name="ping", description="Responds with pong!")
+@slash.slash_command(name="ping", description="Responds with pong!")
 async def ping(ctx):
     await ctx.send("pong!")
 
