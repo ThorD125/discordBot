@@ -35,19 +35,8 @@ async def on_message(message):
     # if message.content.startswith('dbtest'):
     #     await message.channel.send(get_list_from_mariadb())
 
-    if not message.content.startswith(client.command_prefix):
-        return
-
-    command_prefix = client.command_prefix
-    command_list = [cmd.name for cmd in client.commands]
-
-    if len(message.content) <= len(command_prefix):
-        suggestions = " / ".join(command_list)
-        await message.channel.send(f"Suggestions: {command_prefix}{suggestions}")
-
-    await client.process_commands(message)
-
-client = commands.Bot(command_prefix='\\', intents=intents)
+client = commands.Bot(
+    command_prefix=commands.when_mentioned_or('/'), intents=intents)
 
 
 @client.command()
