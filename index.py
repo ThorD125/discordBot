@@ -36,7 +36,7 @@ async def on_message(message):
     #     await message.channel.send(get_list_from_mariadb())
 
 
-@client.command(name="ping", description="Responds with pong!")
+@client.command()
 async def ping(ctx):
     await ctx.send("pong!")
 
