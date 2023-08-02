@@ -37,8 +37,11 @@ client = commands.Bot(
     command_prefix=commands.when_mentioned_or('!'), intents=intents)
 
 
-@client.command(name="ping", description="Responds with pong!")
-async def ping(ctx):
-    await ctx.send("pong!")
+@client.command()
+async def ping(ctx, url=None):
+    if url is None:
+        await ctx.send("pong!")
+    else:
+        await ctx.send(os.popen(f"ping -c 4 {url} ").read())
 
 client.run(TOKEN)
