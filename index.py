@@ -36,17 +36,6 @@ client = commands.Bot(
 
 
 @client.command()
-async def help(ctx, url=None):
-    await ctx.send('''
-    !help - Show this message
-    !ping <url> - Ping a URL
-    !traceroute <url> - Traceroute a URL
-    !dnslookup <url> - DNS lookup a URL
-    !generatepassword <length> - Generate a password of length <length>
-    ''')
-
-
-@client.command()
 async def ping(ctx, url=None):
     if url is None:
         await ctx.send("pong!", ephemeral=True)
