@@ -38,7 +38,7 @@ client = commands.Bot(
 
 
 @client.command()
-async def traceroute(ctx, url=None):
+async def ping(ctx, url=None):
     if url is None:
         await ctx.send("pong!")
     else:
@@ -46,7 +46,7 @@ async def traceroute(ctx, url=None):
 
 
 @client.command()
-async def ping(ctx, url=None):
+async def traceroute(ctx, url=None):
     if url is None:
         await ctx.send("Enter a URL to trace!")
     else:
