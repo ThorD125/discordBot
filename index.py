@@ -16,8 +16,7 @@ if TOKEN is None:
 intents = discord.Intents.default()
 intents.message_content = True
 
-client = discord.Client(
-    command_prefix=commands.when_mentioned_or('!'), intents=intents)
+client = discord.Client(intents=intents)
 
 
 @client.event
@@ -32,6 +31,10 @@ async def on_message(message):
 
     # if message.content.startswith('dbtest'):
     #     await message.channel.send(get_list_from_mariadb())
+
+
+client = commands.Bot(
+    command_prefix=commands.when_mentioned_or('!'), intents=intents)
 
 
 @client.command()
