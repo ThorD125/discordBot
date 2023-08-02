@@ -36,7 +36,7 @@ client = commands.Bot(
     command_prefix=commands.when_mentioned_or('\\'), intents=intents)
 
 
-@slash.slash_command(name="ping", description="Responds with pong!")
+@client.slash_command(name="ping", description="Responds with pong!")
 async def ping(ctx):
     await ctx.send("pong!")
 
