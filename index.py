@@ -61,7 +61,7 @@ async def dnslookup(ctx, url=None):
 
 @client.command()
 async def generatepassword(ctx, amount=20):
-    await ctx.send(os.popen(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;[()*&^%$#@' | head -c {amount})").read())
+    await ctx.send(os.popen(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@' | head -c {amount})").read())
 
 
 client.run(TOKEN)
