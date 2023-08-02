@@ -28,10 +28,8 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-
     # if message.content.startswith('dbtest'):
     #     await message.channel.send(get_list_from_mariadb())
-
 
 client = commands.Bot(
     command_prefix=commands.when_mentioned_or('!'), intents=intents)
@@ -51,5 +49,13 @@ async def traceroute(ctx, url=None):
         await ctx.send("Enter a URL to trace!")
     else:
         await ctx.send(os.popen(f"traceroute {url} ").read())
+
+
+@client.command()
+async def dnslookup(ctx, url=None):
+    if url is None:
+        await ctx.send("Enter a URL to trace!")
+    else:
+        await ctx.send(os.popen(f"dig {url}").read())
 
 client.run(TOKEN)
