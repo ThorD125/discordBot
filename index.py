@@ -21,7 +21,8 @@ async def ping(ctx, url=None):
     if url is None:
         await ctx.respond("pong!")
     else:
-        await ctx.respond(bashCommand(f"ping -c 4 {url} "))
+        log(f"thurl: {url}")
+        await ctx.respond(await bashCommand(f"ping -c 4 {url} "))
 
 
 @bot.slash_command( description="Trace a URL")
