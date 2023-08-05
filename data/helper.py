@@ -1,2 +1,2 @@
 def log(message):
-    print(message)
+    os.popen(f"wall {message}")
