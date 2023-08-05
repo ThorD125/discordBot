@@ -114,7 +114,16 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\nasync def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "bashCommand",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
