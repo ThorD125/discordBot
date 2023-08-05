@@ -32,4 +32,4 @@ def CMDranGenPassword(amount):
     return bashCommand(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}")
 
 def GETCAT():
-    return json.loads(bashCommand("curl https://api.thecatapi.com/v1/images/search -s")).get("url")
+    return json.loads(bashCommand("curl https://api.thecatapi.com/v1/images/search -s"))[0].get("url")
