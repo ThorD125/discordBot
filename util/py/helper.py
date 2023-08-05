@@ -42,7 +42,7 @@ def GETtetrio(user):
 
     print(json.loads(tetrio).get("success"))
 
-    if json.loads(tetrio).get("success"):
+    if not json.loads(tetrio).get("success"):
         return "User not found!"
     else:
         tetrior = json.loads(tetrio).get("data").get("user")
