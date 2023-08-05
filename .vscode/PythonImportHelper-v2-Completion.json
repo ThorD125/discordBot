@@ -250,7 +250,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if json.loads(tetrio).get(\"success\") :",
+        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -259,7 +259,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if json.loads(tetrio).get(\"success\") :\n        return \"User not found!\"\n    else:",
+        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))\n    if json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -268,7 +268,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if json.loads(tetrio).get(\"success\") :\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"",
+        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))\n    if json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -277,7 +277,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if json.loads(tetrio).get(\"success\") :\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"\n        ```yaml\n        {user}'s stats:",
+        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))\n    if json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"\n        ```yaml",
         "detail": "util.py.helper",
         "documentation": {}
     },

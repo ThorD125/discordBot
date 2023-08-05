@@ -40,7 +40,9 @@ def GETtetrio(user):
 
     tetrio = bashCommand(f"curl https://ch.tetr.io/api/users/{user} -s")
 
-    if json.loads(tetrio).get("success") :
+    print(json.loads(tetrio).get("success"))
+
+    if json.loads(tetrio).get("success"):
         return "User not found!"
     else:
         tetrior = json.loads(tetrio).get("data").get("user")
