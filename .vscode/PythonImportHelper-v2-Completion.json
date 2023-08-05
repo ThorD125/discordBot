@@ -73,7 +73,16 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    log(\"Error: Bot token not found in .env file.\")\n    exit(1)\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command()\nasync def ping(ctx, url=None):",
+        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    log(\"Error: Bot token not found in .env file.\")\n    exit(1)\nSERVERID = os.getenv('SERVERID')\nif SERVERID is None:\n    log(\"Error: Server ID not found in .env file.\")\n    exit(1)\nbot = discord.Bot()\n@bot.event",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "SERVERID",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "SERVERID = os.getenv('SERVERID')\nif SERVERID is None:\n    log(\"Error: Server ID not found in .env file.\")\n    exit(1)\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):",
         "detail": "index",
         "documentation": {}
     },
@@ -82,7 +91,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command()\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.respond(os.popen(f\"ping -c 4 {url} \").read())",
+        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.respond(os.popen(f\"ping -c 4 {url} \").read())",
         "detail": "index",
         "documentation": {}
     }
