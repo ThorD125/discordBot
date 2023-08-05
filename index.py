@@ -2,7 +2,7 @@ import os
 import discord
 import subprocess
 
-from util.py.helper import log, bashCommand
+from util.py.helper import log, bashCommand, downisit
 from util.py.env import loadEnv
 
 
@@ -84,7 +84,7 @@ async def isitdown(ctx, url=None):
         await ctx.respond("Enter a URL to trace!")
     else:
         await ctx.defer()
-        await ctx.respond(bashCommand(f"curl https://monitor-api.vercel.app/api/public?url={url} -s"))
+        await ctx.respond(downisit(url))
     
 
 

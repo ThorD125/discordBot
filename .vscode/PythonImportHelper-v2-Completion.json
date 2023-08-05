@@ -43,6 +43,15 @@
         "documentation": {}
     },
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "discord",
         "kind": 6,
         "isExtraImport": true,
@@ -61,6 +70,14 @@
     },
     {
         "label": "bashCommand",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "downisit",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
         "isExtraImport": true,
@@ -114,7 +131,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef downisit(url):\n    return json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isitdown\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -123,7 +140,16 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")",
+        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef downisit(url):\n    return json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isitdown\")",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "downisit",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def downisit(url):\n    return json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isitdown\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
