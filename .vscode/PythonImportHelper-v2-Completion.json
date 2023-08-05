@@ -85,14 +85,6 @@
         "documentation": {}
     },
     {
-        "label": "CMDcat",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
         "label": "CMDdig",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
@@ -110,6 +102,14 @@
     },
     {
         "label": "CMDtraceroute",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "CMDranGenPassword",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
         "isExtraImport": true,

@@ -2,7 +2,7 @@ import os
 import discord
 import subprocess
 
-from util.py.helper import log, bashCommand, downisit, CMDcat, CMDdig, CMDping, CMDtraceroute
+from util.py.helper import log, bashCommand, downisit, CMDdig, CMDping, CMDtraceroute, CMDranGenPassword
 from util.py.env import loadEnv
 
 
