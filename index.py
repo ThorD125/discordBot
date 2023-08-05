@@ -2,7 +2,7 @@ import os
 import discord
 import subprocess
 
-from util.py.helper import log
+from util.py.helper import log, bashCommand
 from util.py.env import loadEnv
 
 
@@ -14,11 +14,6 @@ bot = discord.Bot()
 @bot.event
 async def on_ready():
     log(f"We have logged in as {bot.user}")
-
-
-def bashCommand(command):
-    return subprocess.call(command.split(" "))
-
 
 @bot.slash_command()
 async def ping(ctx, url=None):
