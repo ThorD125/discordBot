@@ -22,37 +22,37 @@ async def on_ready():
 @bot.slash_command()
 async def ping(ctx, url=None):
     if url is None:
-        await ctx.send("pong!")
+        await ctx.respond("pong!")
     else:
-        await ctx.send(os.popen(f"ping -c 4 {url} ").read())
+        await ctx.respond(os.popen(f"ping -c 4 {url} ").read())
 
 
 @bot.slash_command()
 async def traceroute(ctx, url=None):
     if url is None:
-        await ctx.send("Enter a URL to trace!")
+        await ctx.respond("Enter a URL to trace!")
     else:
-        await ctx.send(os.popen(f"traceroute {url} ").read())
+        await ctx.respond(os.popen(f"traceroute {url} ").read())
 
 
 @bot.slash_command()
 async def dnslookup(ctx, url=None):
     if url is None:
-        await ctx.send("Enter a URL to trace!")
+        await ctx.respond("Enter a URL to trace!")
     else:
-        await ctx.send(os.popen(f"dig {url}").read())
+        await ctx.respond(os.popen(f"dig {url}").read())
 
 
 @bot.slash_command()
 async def generatepassword(ctx, amount=20):
-    await ctx.send(os.popen(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {amount}").read())
+    await ctx.respond(os.popen(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {amount}").read())
 
 
 @bot.slash_command()
 async def test(ctx):
     username = ctx.author.name
 
-    await ctx.send("hi" + username)
+    await ctx.respond("hi" + username)
 
 
 bot.run(TOKEN)
