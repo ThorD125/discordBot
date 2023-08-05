@@ -17,7 +17,7 @@ async def on_ready():
 
 
 def bashCommand(command):
-    return subprocess.check_output(command, shell=True, text=True)
+    return subprocess.call(command.split(" "))
 
 
 @bot.slash_command()
