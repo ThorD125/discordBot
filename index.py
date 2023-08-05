@@ -56,6 +56,7 @@ async def test(ctx):
 
 @bot.slash_command()
 async def update(ctx):
+    print("Updating...")
     os.popen(f"./update.sh").read()
     await ctx.respond("Updated!")
 
