@@ -1,6 +1,6 @@
 #!/bin/bash
 
-running_script="./index.py"
+running_script="./../../index.py"
 
 pids=$(ps aux | grep "$running_script" | grep -v grep | awk '{print $2}')
 if [ -n "$pids" ]; then
