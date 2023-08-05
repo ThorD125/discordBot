@@ -22,7 +22,7 @@ def bashCommand(command):
 
 @bot.slash_command(description="Pong a URL")
 async def ping(ctx, url=None):
-    print(f"URL: {url}")
+    log(f"URL: {url}")
     if url is None:
         await ctx.respond("pong!")
     else:
