@@ -5,5 +5,6 @@ def log(message):
     os.popen(f"wall {message}")
 
 async def bashCommand(command):
-    output = subprocess.check_output(command, shell=True, text=True)
-    return output
+    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+    process.wait()
+    return process.stdout.read().decode("utf-8")
