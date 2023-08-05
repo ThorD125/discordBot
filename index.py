@@ -53,6 +53,11 @@ async def update(ctx):
     await ctx.respond("Updating!")
     os.popen(f"./update.sh").read()
 
+@bot.slash_command()
+async def restart(ctx):
+    await ctx.respond("Restarting!")
+    os.popen(f"./restart.sh").read()
+
 
 
     
