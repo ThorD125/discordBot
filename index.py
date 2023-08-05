@@ -15,7 +15,7 @@ bot = discord.Bot()
 async def on_ready():
     log(f"We have logged in as {bot.user}")
 
-@bot.slash_command()
+@bot.slash_command(description="Pong a URL")
 async def ping(ctx, url=None):
     if url is None:
         await ctx.respond("pong!")
@@ -86,7 +86,11 @@ async def isitdown(ctx, url=None):
     else:
         await ctx.defer()
         await ctx.respond(downisit(url))
-    
+
+@bot.slash_command(description="cat")
+async def cat(ctx,):
+    await ctx.defer()
+    await ctx.respond(file=discord.File("test.jpg"))
 
 
 bot.run(env["TOKEN"])
