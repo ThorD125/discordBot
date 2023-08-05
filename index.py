@@ -3,7 +3,7 @@ import discord
 import subprocess
 
 from util.py.helper import (bashCommand, CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
-    downisit, GETCAT, log)
+    downisit, GETCAT, log, GETtetrio)
 from util.py.env import loadEnv
 from test import url
 
@@ -93,6 +93,13 @@ async def isitdown(ctx, url=None):
 async def cat(ctx):
     await ctx.defer()
     await ctx.respond(GETCAT())
+
+@bot.slash_command(description="Get a tetrio user's stats")
+async def tetrio(ctx, user=None):
+    if user is None:
+        user = ctx.author.name
+    await ctx.defer()
+    await ctx.respond(GETtetrio(user))
 
 bot.run(env["TOKEN"])
 

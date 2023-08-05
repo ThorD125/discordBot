@@ -1,6 +1,7 @@
 import os
 import subprocess
 import json
+import util.py.helper
 
 
 def log(message):
@@ -33,3 +34,22 @@ def CMDranGenPassword(amount):
 
 def GETCAT():
     return json.loads(bashCommand("curl https://api.thecatapi.com/v1/images/search -s"))[0].get("url")
+
+def GETtetrio(user):
+    user = commandFilter(user)
+    tetrio = bashCommand(f"curl https://ch.tetr.io/api/users/{user} -s")
+    if tetrio == "Not Found":
+        return "User not found!"
+    else:
+        tetrio = json.loads(tetrio).get("data").get("user")
+        return f"""
+        ```yaml
+        {user}'s stats:
+        XP: {tetrio.get("xp")}
+        League:
+            Games played: {tetrio.get("league").get("gamesplayed")}
+            Games won: {tetrio.get("league").get("gameswon")}
+            Rating: {tetrio.get("league").get("rating")}
+            Percentile rank: {tetrio.get("league").get("percentile_rank")}
+        ```
+        """
