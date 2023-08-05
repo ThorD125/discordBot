@@ -1,3 +1,5 @@
+#!/bin/bash
+
 pipreqs --encoding utf-8
 git status
 git add .
