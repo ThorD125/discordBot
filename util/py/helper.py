@@ -38,7 +38,8 @@ def GETCAT():
 def GETtetrio(user):
     user = commandFilter(user)
     tetrio = bashCommand(f"curl https://ch.tetr.io/api/users/{user} -s")
-    if tetrio == "Not Found":
+    print(tetrio)
+    if True :
         return "User not found!"
     else:
         tetrio = json.loads(tetrio).get("data").get("user")
