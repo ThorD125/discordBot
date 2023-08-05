@@ -61,23 +61,7 @@
         "documentation": {}
     },
     {
-        "label": "log",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
         "label": "bashCommand",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "downisit",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
         "isExtraImport": true,
@@ -101,6 +85,14 @@
         "documentation": {}
     },
     {
+        "label": "CMDranGenPassword",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
         "label": "CMDtraceroute",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
@@ -109,7 +101,23 @@
         "documentation": {}
     },
     {
-        "label": "CMDranGenPassword",
+        "label": "downisit",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "GETCAT",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "log",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
         "isExtraImport": true,
@@ -207,7 +215,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")",
+        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -216,7 +224,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")",
+        "peekOfCode": "def CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -225,7 +233,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")",
+        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -234,7 +242,16 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")",
+        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "GETCAT",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
         "detail": "util.py.helper",
         "documentation": {}
     },

@@ -30,3 +30,6 @@ def CMDdig(url):
 
 def CMDranGenPassword(amount):
     return bashCommand(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}")
+
+def GETCAT():
+    return bashCommand("curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'")

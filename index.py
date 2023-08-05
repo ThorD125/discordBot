@@ -2,7 +2,8 @@ import os
 import discord
 import subprocess
 
-from util.py.helper import log, bashCommand, downisit, CMDdig, CMDping, CMDtraceroute, CMDranGenPassword
+from util.py.helper import (bashCommand, CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
+    downisit, GETCAT, log)
 from util.py.env import loadEnv
 from test import url
 
@@ -88,15 +89,10 @@ async def isitdown(ctx, url=None):
         await ctx.defer()
         await ctx.respond(downisit(url))
 
-@bot.slash_command(description="cat")
-async def catfile(ctx,):
+@bot.slash_command(description="Get a random cat")
+async def cat(ctx):
     await ctx.defer()
-    await ctx.respond(file=discord.File("test.jpg"))
-@bot.slash_command(description="cat")
-async def caturl(ctx,):
-    await ctx.defer()
-    await ctx.respond("https://cataas.com/cat")
-
+    await ctx.respond(GETCAT())
 
 bot.run(env["TOKEN"])
 
