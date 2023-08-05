@@ -277,7 +277,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"\n        ```yaml",
+        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml\n{user}'s stats:",
         "detail": "util.py.helper",
         "documentation": {}
     },
