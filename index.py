@@ -3,12 +3,14 @@ from dotenv import load_dotenv
 import os
 import discord
 
+from data.helper import log
+
 
 load_dotenv()
 
 TOKEN = os.getenv('TOKEN')
 if TOKEN is None:
-    print("Error: Bot token not found in .env file.")
+    log("Error: Bot token not found in .env file.")
     exit(1)
 
 bot = discord.Bot()
@@ -16,7 +18,7 @@ bot = discord.Bot()
 
 @bot.event
 async def on_ready():
-    print(f"We have logged in as {bot.user}")
+    log(f"We have logged in as {bot.user}")
 
 
 @bot.slash_command()
@@ -51,11 +53,13 @@ async def generatepassword(ctx, amount=20):
 @bot.slash_command()
 async def update(ctx):
     await ctx.respond("Updating!")
+    log("Updating!")
     os.popen(f"./update.sh").read()
 
 @bot.slash_command()
 async def restart(ctx):
     await ctx.respond("Restarting!")
+    log("Restarting!")
     os.popen(f"./restart.sh").read()
 
 
