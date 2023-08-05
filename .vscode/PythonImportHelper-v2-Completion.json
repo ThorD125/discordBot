@@ -56,16 +56,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\nSERVERID = os.getenv('SERVERID')\nif SERVERID is None:\n    print(\"Error: Server ID not found in .env file.\")\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    print(f\"We have logged in as {bot.user}\")",
-        "detail": "index",
-        "documentation": {}
-    },
-    {
-        "label": "SERVERID",
-        "kind": 5,
-        "importPath": "index",
-        "description": "index",
-        "peekOfCode": "SERVERID = os.getenv('SERVERID')\nif SERVERID is None:\n    print(\"Error: Server ID not found in .env file.\")\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    print(f\"We have logged in as {bot.user}\")\n@bot.slash_command()\nasync def hello(ctx):\n    await ctx.respond(\"Hello!\")",
+        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\n    exit(1)\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    print(f\"We have logged in as {bot.user}\")\n@bot.slash_command()\nasync def ping(ctx, url=None):",
         "detail": "index",
         "documentation": {}
     },
@@ -74,7 +65,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    print(f\"We have logged in as {bot.user}\")\n@bot.slash_command()\nasync def hello(ctx):\n    await ctx.respond(\"Hello!\")\nbot.run(TOKEN)",
+        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    print(f\"We have logged in as {bot.user}\")\n@bot.slash_command()\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.send(\"pong!\")\n    else:\n        await ctx.send(os.popen(f\"ping -c 4 {url} \").read())",
         "detail": "index",
         "documentation": {}
     }
