@@ -34,28 +34,20 @@
         "documentation": {}
     },
     {
+        "label": "get_list_from_mariadb",
+        "importPath": "dbtest",
+        "description": "dbtest",
+        "isExtraImport": true,
+        "detail": "dbtest",
+        "documentation": {}
+    },
+    {
         "label": "discord",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "discord",
         "description": "discord",
         "detail": "discord",
-        "documentation": {}
-    },
-    {
-        "label": "commands",
-        "importPath": "discord.ext",
-        "description": "discord.ext",
-        "isExtraImport": true,
-        "detail": "discord.ext",
-        "documentation": {}
-    },
-    {
-        "label": "get_list_from_mariadb",
-        "importPath": "dbtest",
-        "description": "dbtest",
-        "isExtraImport": true,
-        "detail": "dbtest",
         "documentation": {}
     },
     {
@@ -72,43 +64,25 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\n    exit(1)\nintents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')",
+        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    print(\"Error: Bot token not found in .env file.\")\nSERVERID = os.getenv('SERVERID')\nif SERVERID is None:\n    print(\"Error: Server ID not found in .env file.\")\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    print(f\"We have logged in as {bot.user}\")",
         "detail": "index",
         "documentation": {}
     },
     {
-        "label": "intents",
+        "label": "SERVERID",
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return",
+        "peekOfCode": "SERVERID = os.getenv('SERVERID')\nif SERVERID is None:\n    print(\"Error: Server ID not found in .env file.\")\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    print(f\"We have logged in as {bot.user}\")\n@bot.slash_command()\nasync def hello(ctx):\n    await ctx.respond(\"Hello!\")",
         "detail": "index",
         "documentation": {}
     },
     {
-        "label": "intents.message_content",
+        "label": "bot",
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "intents.message_content = True\nclient = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    # if message.content.startswith('dbtest'):",
-        "detail": "index",
-        "documentation": {}
-    },
-    {
-        "label": "client",
-        "kind": 5,
-        "importPath": "index",
-        "description": "index",
-        "peekOfCode": "client = discord.Client(intents=intents)\n@client.event\nasync def on_ready():\n    print(f'We have logged in as {client.user}')\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    # if message.content.startswith('dbtest'):\n    #     await message.channel.send(get_list_from_mariadb())",
-        "detail": "index",
-        "documentation": {}
-    },
-    {
-        "label": "client",
-        "kind": 5,
-        "importPath": "index",
-        "description": "index",
-        "peekOfCode": "client = commands.Bot(\n    command_prefix=commands.when_mentioned_or('!'), intents=intents)\n@client.command()\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.send(\"pong!\")\n    else:\n        await ctx.send(os.popen(f\"ping -c 4 {url} \").read())\n@client.command()\nasync def traceroute(ctx, url=None):",
+        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    print(f\"We have logged in as {bot.user}\")\n@bot.slash_command()\nasync def hello(ctx):\n    await ctx.respond(\"Hello!\")\nbot.run(TOKEN)",
         "detail": "index",
         "documentation": {}
     }
