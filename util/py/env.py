@@ -4,14 +4,15 @@ import os
 def loadEnv():
     load_dotenv()
 
-    token = os.getenv('TOKEN')
-    if token is None:
-        log("Error: Bot token not found in .env file.")
-        exit(1)
+    returner = {}
 
-    serverid = os.getenv('SERVERID')
-    if serverid is None:
-        log("Error: Server ID not found in .env file.")
-        exit(1)
+    for key in ["token", "serverid"]:
+        print(key)
+        getKey = os.getenv(key.upper())
+        if getKey is None:
+            log(f"Error: {key} not found in .env file.")
+            exit(1)
+        else:
+            returner[key.upper()] = getKey
     
-    return {"TOKEN": token, "SERVERID": serverid}
+    return returner

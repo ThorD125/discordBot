@@ -72,7 +72,7 @@
         "kind": 2,
         "importPath": "util.py.env",
         "description": "util.py.env",
-        "peekOfCode": "def loadEnv():\n    load_dotenv()\n    token = os.getenv('TOKEN')\n    if token is None:\n        log(\"Error: Bot token not found in .env file.\")\n        exit(1)\n    serverid = os.getenv('SERVERID')\n    if serverid is None:\n        log(\"Error: Server ID not found in .env file.\")\n        exit(1)",
+        "peekOfCode": "def loadEnv():\n    load_dotenv()\n    returner = {}\n    for key in [\"token\", \"serverid\"]:\n        print(key)\n        getKey = os.getenv(key.upper())\n        if getKey is None:\n            log(f\"Error: {key} not found in .env file.\")\n            exit(1)\n        else:",
         "detail": "util.py.env",
         "documentation": {}
     },
