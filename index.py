@@ -2,7 +2,7 @@ import os
 import discord
 import subprocess
 
-from util.py.helper import log, bashCommand, downisit
+from util.py.helper import log, bashCommand, downisit, CMDcat, CMDdig, CMDping, CMDtraceroute
 from util.py.env import loadEnv
 
 
@@ -21,7 +21,7 @@ async def ping(ctx, url=None):
         await ctx.respond("pong!")
     else:
         await ctx.defer()
-        await ctx.respond(bashCommand(f"ping -c 4 {url}"))
+        await ctx.respond(CMDping(url))
 
 
 @bot.slash_command(description="Trace a URL")
@@ -30,22 +30,23 @@ async def traceroute(ctx, url=None):
         await ctx.respond("Enter a URL to trace!")
     else:
         await ctx.defer()
-        await ctx.respond(bashCommand(f"traceroute {url} "))
+        await ctx.respond(CMDtraceroute(url))
 
 
 @bot.slash_command(description="DNS lookup")
 async def dnslookup(ctx, url=None):
+    url.replace(" ", "")
     if url is None:
         await ctx.respond("Enter a URL to trace!")
     else:
         await ctx.defer()
-        await ctx.respond(bashCommand(f"dig {url}"))
+        await ctx.respond(CMDdig(url))
 
 
 @bot.slash_command(description="Generate a random password")
 async def generatepassword(ctx, amount=20):
     await ctx.defer()
-    await ctx.respond(bashCommand(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {amount}"))
+    await ctx.respond(CMDranGenPassword(amount))
 
 
 @bot.slash_command(description="Updating the bot")

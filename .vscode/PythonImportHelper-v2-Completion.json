@@ -85,6 +85,38 @@
         "documentation": {}
     },
     {
+        "label": "CMDcat",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "CMDdig",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "CMDping",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "CMDtraceroute",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
         "label": "log",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
@@ -131,7 +163,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef downisit(url):\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\")\ndef downisit(url):\n    url = commandFilter(url)",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -140,7 +172,16 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef downisit(url):\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"",
+        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\")\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "commandFilter",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\")\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -149,7 +190,43 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def downisit(url):\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"",
+        "peekOfCode": "def downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "CMDping",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "CMDtraceroute",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "CMDdig",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "CMDranGenPassword",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
