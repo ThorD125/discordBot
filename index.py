@@ -1,21 +1,11 @@
-# from dbtest import get_list_from_mariadb
-from dotenv import load_dotenv
 import os
 import discord
 
-from data.helper import log
+from util.py.helper import log
+from util.py.env import loadEnv
 
 
-load_dotenv()
-
-TOKEN = os.getenv('TOKEN')
-if TOKEN is None:
-    log("Error: Bot token not found in .env file.")
-    exit(1)
-SERVERID = os.getenv('SERVERID')
-if SERVERID is None:
-    log("Error: Server ID not found in .env file.")
-    exit(1)
+env = loadEnv()
 
 bot = discord.Bot()
 
@@ -54,13 +44,13 @@ async def generatepassword(ctx, amount=20):
     await ctx.respond(os.popen(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {amount}").read())
 
 
-@bot.slash_command(description="Updating the bot", guild_ids=[SERVERID])
+@bot.slash_command(description="Updating the bot", guild_ids=[env["SERVERID"]])
 async def update(ctx):
     await ctx.respond("Updating!")
     log("Updating!")
     os.popen(f"./update.sh").read()
 
-@bot.slash_command(description="Restart the bot", guild_ids=[SERVERID])
+@bot.slash_command(description="Restart the bot", guild_ids=[env["SERVERID"]])
 async def restart(ctx):
     await ctx.respond("Restarting!")
     log("Restarting!")
@@ -71,5 +61,5 @@ async def restart(ctx):
     
 
 
-bot.run(TOKEN)
+bot.run(env["TOKEN"])
 

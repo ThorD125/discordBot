@@ -3,5 +3,5 @@
 git pull
 
 
-./restart.sh
+./util/sh/restart.sh
 

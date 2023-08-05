@@ -1,20 +1,20 @@
 [
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "mysql.connector",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "mysql.connector",
         "description": "mysql.connector",
         "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -44,45 +44,53 @@
     },
     {
         "label": "log",
-        "importPath": "data.helper",
-        "description": "data.helper",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
         "isExtraImport": true,
-        "detail": "data.helper",
+        "detail": "util.py.helper",
         "documentation": {}
     },
     {
-        "label": "log",
-        "kind": 2,
-        "importPath": "data.helper",
-        "description": "data.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall -n {message}\")",
-        "detail": "data.helper",
+        "label": "loadEnv",
+        "importPath": "util.py.env",
+        "description": "util.py.env",
+        "isExtraImport": true,
+        "detail": "util.py.env",
         "documentation": {}
     },
     {
         "label": "get_list_from_mariadb",
         "kind": 2,
-        "importPath": "dbtest",
-        "description": "dbtest",
+        "importPath": "service.dbtest",
+        "description": "service.dbtest",
         "peekOfCode": "def get_list_from_mariadb(column=\"*\", table=\"text\"):\n    try:\n        load_dotenv()\n        host=os.getenv(\"host\")\n        user=os.getenv(\"user\")\n        password=os.getenv(\"password\")\n        database=os.getenv(\"database\")\n        if host is None or user is None or password is None or database is None:\n            print(\"Error: Bot token not found in .env file.\")\n            exit(1)",
-        "detail": "dbtest",
+        "detail": "service.dbtest",
         "documentation": {}
     },
     {
-        "label": "TOKEN",
-        "kind": 5,
-        "importPath": "index",
-        "description": "index",
-        "peekOfCode": "TOKEN = os.getenv('TOKEN')\nif TOKEN is None:\n    log(\"Error: Bot token not found in .env file.\")\n    exit(1)\nSERVERID = os.getenv('SERVERID')\nif SERVERID is None:\n    log(\"Error: Server ID not found in .env file.\")\n    exit(1)\nbot = discord.Bot()\n@bot.event",
-        "detail": "index",
+        "label": "loadEnv",
+        "kind": 2,
+        "importPath": "util.py.env",
+        "description": "util.py.env",
+        "peekOfCode": "def loadEnv():\n    load_dotenv()\n    token = os.getenv('TOKEN')\n    if token is None:\n        log(\"Error: Bot token not found in .env file.\")\n        exit(1)\n    serverid = os.getenv('SERVERID')\n    if serverid is None:\n        log(\"Error: Server ID not found in .env file.\")\n        exit(1)",
+        "detail": "util.py.env",
         "documentation": {}
     },
     {
-        "label": "SERVERID",
+        "label": "log",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "env",
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "SERVERID = os.getenv('SERVERID')\nif SERVERID is None:\n    log(\"Error: Server ID not found in .env file.\")\n    exit(1)\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):",
+        "peekOfCode": "env = loadEnv()\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:",
         "detail": "index",
         "documentation": {}
     },
