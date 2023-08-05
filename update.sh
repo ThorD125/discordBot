@@ -3,6 +3,8 @@
 # Step 1: Git pull the latest changes
 git pull
 
+pip install -r requirements.txt
+
 # Step 2: Terminate the running script
 # Change "./index.py" to the actual name of your Python script if different
 running_script="./index.py"
