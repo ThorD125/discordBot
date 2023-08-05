@@ -55,7 +55,7 @@
         "kind": 2,
         "importPath": "data.helper",
         "description": "data.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall -n {message}\")",
         "detail": "data.helper",
         "documentation": {}
     },
