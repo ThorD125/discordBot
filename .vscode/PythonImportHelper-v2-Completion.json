@@ -163,7 +163,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\")\ndef downisit(url):\n    url = commandFilter(url)",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -172,7 +172,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\")\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):",
+        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -181,7 +181,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\")\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):",
+        "peekOfCode": "def commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):",
         "detail": "util.py.helper",
         "documentation": {}
     },

@@ -13,7 +13,7 @@ def bashCommand(command):
 
 
 def commandFilter(input):
-    return input.replace(" ", "").replace("\n", "").replace("\t", "").replace("\r", "")
+    return input.replace(" ", "").replace("\n", "").replace("\t", "").split("&&")[0]
 
 def downisit(url):
     url = commandFilter(url)
