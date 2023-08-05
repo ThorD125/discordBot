@@ -1,4 +1,4 @@
-from dbtest import get_list_from_mariadb
+# from dbtest import get_list_from_mariadb
 from dotenv import load_dotenv
 import os
 import discord

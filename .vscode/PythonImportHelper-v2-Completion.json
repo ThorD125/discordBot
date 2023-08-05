@@ -34,14 +34,6 @@
         "documentation": {}
     },
     {
-        "label": "get_list_from_mariadb",
-        "importPath": "dbtest",
-        "description": "dbtest",
-        "isExtraImport": true,
-        "detail": "dbtest",
-        "documentation": {}
-    },
-    {
         "label": "discord",
         "kind": 6,
         "isExtraImport": true,
