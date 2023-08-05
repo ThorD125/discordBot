@@ -8,5 +8,3 @@ git pull
 # Change "./index.py" to the actual name of your Python script if different
 ./restart.sh
 
-# Step 3: Execute the Python3 script
-python3 "$running_script" &
