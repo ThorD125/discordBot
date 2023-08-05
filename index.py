@@ -54,7 +54,7 @@ async def update(ctx):
 async def restart(ctx):
     await ctx.respond("Restarting!")
     log("Restarting!")
-    os.popen(f"./restart.sh").read()
+    os.popen(f"./util/sh/restart.sh").read()
 
 
 
