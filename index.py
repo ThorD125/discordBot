@@ -49,12 +49,6 @@ async def generatepassword(ctx, amount=20):
 
 
 @bot.slash_command()
-async def test(ctx):
-    username = ctx.author.name
-
-    await ctx.respond("hi" + username)
-
-@bot.slash_command()
 async def update(ctx):
     await ctx.respond("Updating!")
     os.popen(f"./update.sh").read()
