@@ -7,7 +7,6 @@ def loadEnv():
     returner = {}
 
     for key in ["token", "serverid"]:
-        print(key)
         getKey = os.getenv(key.upper())
         if getKey is None:
             log(f"Error: {key} not found in .env file.")

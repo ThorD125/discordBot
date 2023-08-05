@@ -51,6 +51,14 @@
         "documentation": {}
     },
     {
+        "label": "bashCommand",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
         "label": "loadEnv",
         "importPath": "util.py.env",
         "description": "util.py.env",
@@ -72,7 +80,7 @@
         "kind": 2,
         "importPath": "util.py.env",
         "description": "util.py.env",
-        "peekOfCode": "def loadEnv():\n    load_dotenv()\n    returner = {}\n    for key in [\"token\", \"serverid\"]:\n        print(key)\n        getKey = os.getenv(key.upper())\n        if getKey is None:\n            log(f\"Error: {key} not found in .env file.\")\n            exit(1)\n        else:",
+        "peekOfCode": "def loadEnv():\n    load_dotenv()\n    returner = {}\n    for key in [\"token\", \"serverid\"]:\n        getKey = os.getenv(key.upper())\n        if getKey is None:\n            log(f\"Error: {key} not found in .env file.\")\n            exit(1)\n        else:\n            returner[key.upper()] = getKey",
         "detail": "util.py.env",
         "documentation": {}
     },
@@ -81,7 +89,16 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashcommand(command):\n    return os.popen(command).read()",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "bashcommand",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def bashcommand(command):\n    return os.popen(command).read()",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -99,7 +116,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.respond(os.popen(f\"ping -c 4 {url} \").read())",
+        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.respond(bashCommand(f\"ping -c 4 {url} \"))",
         "detail": "index",
         "documentation": {}
     }
