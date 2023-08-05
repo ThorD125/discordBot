@@ -37,20 +37,21 @@ def GETCAT():
 
 def GETtetrio(user):
     user = commandFilter(user)
-    tetrio = json.loads(bashCommand(f"curl https://ch.tetr.io/api/users/{user} -s"))
-    print()
-    if tetrio.get("success") :
+
+    tetrio = bashCommand(f"curl https://ch.tetr.io/api/users/{user} -s")
+
+    if json.loads(tetrio).get("success") :
         return "User not found!"
     else:
-        tetrio = tetrio.get("data").get("user")
+        tetrior = json.loads(tetrio).get("data").get("user")
         return f"""
         ```yaml
         {user}'s stats:
-        XP: {tetrio.get("xp")}
+        XP: {tetrior.get("xp")}
         League:
-            Games played: {tetrio.get("league").get("gamesplayed")}
-            Games won: {tetrio.get("league").get("gameswon")}
-            Rating: {tetrio.get("league").get("rating")}
-            Percentile rank: {tetrio.get("league").get("percentile_rank")}
+            Games played: {tetrior.get("league").get("gamesplayed")}
+            Games won: {tetrior.get("league").get("gameswon")}
+            Rating: {tetrior.get("league").get("rating")}
+            Percentile rank: {tetrior.get("league").get("percentile_rank")}
         ```
         """
