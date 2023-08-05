@@ -20,7 +20,7 @@ def bashCommand(command):
     return subprocess.check_output(command, shell=True, text=True)
 
 
-@bot.slash_command(description="Pong a URL")
+@bot.slash_command()
 async def ping(ctx, url=None):
     log(f"URL: {url}")
     if url is None:
