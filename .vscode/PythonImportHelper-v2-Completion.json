@@ -89,7 +89,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    return os.popen(command).read()",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    output = os.popen(command).read()\n    log(f\"Command: {command}\\nOutput: {output}\")\n    return output",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -98,7 +98,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def bashCommand(command):\n    return os.popen(command).read()",
+        "peekOfCode": "def bashCommand(command):\n    output = os.popen(command).read()\n    log(f\"Command: {command}\\nOutput: {output}\")\n    return output",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -116,7 +116,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.respond(os.popen(f\"ping -c 4 {url} \").read())",
+        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.respond(bashCommand(f\"ping -c 4 {url} \"))",
         "detail": "index",
         "documentation": {}
     }

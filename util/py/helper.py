@@ -4,4 +4,6 @@ def log(message):
     os.popen(f"wall {message}")
 
 def bashCommand(command):
-    return os.popen(command).read()
+    output = os.popen(command).read()
+    log(f"Command: {command}\nOutput: {output}")
+    return output
