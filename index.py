@@ -55,7 +55,7 @@ async def test(ctx):
     await ctx.respond("hi" + username)
 
 @bot.slash_command()
-async def udate(ctx):
+async def update(ctx):
     os.popen(f"./update.sh").read()
     await ctx.respond("Updated!")
 
