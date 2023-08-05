@@ -115,7 +115,7 @@
         "kind": 2,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "def bashCommand(command):\n    return subprocess.check_output(command, shell=True, text=True)\n# @bot.slash_command(description=\"Pong a URL\")\n# async def ping(ctx, url=None):\n#     if url is None:\n#         await ctx.respond(\"pong!\")\n#     else:\n#         await ctx.respond(bashCommand(f\"ping -c 4 {url} \"))\n# @bot.slash_command(description=\"Trace a URL\")\n# async def traceroute(ctx, url=None):",
+        "peekOfCode": "def bashCommand(command):\n    return subprocess.check_output(command, shell=True, text=True)\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.respond(bashCommand(f\"ping -c 4 {url} \"))\n# @bot.slash_command(description=\"Trace a URL\")\n# async def traceroute(ctx, url=None):",
         "detail": "index",
         "documentation": {}
     },
@@ -124,7 +124,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "env = loadEnv()\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\ndef bashCommand(command):\n    return subprocess.check_output(command, shell=True, text=True)\n# @bot.slash_command(description=\"Pong a URL\")\n# async def ping(ctx, url=None):\n#     if url is None:",
+        "peekOfCode": "env = loadEnv()\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\ndef bashCommand(command):\n    return subprocess.check_output(command, shell=True, text=True)\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:",
         "detail": "index",
         "documentation": {}
     },
@@ -133,7 +133,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\ndef bashCommand(command):\n    return subprocess.check_output(command, shell=True, text=True)\n# @bot.slash_command(description=\"Pong a URL\")\n# async def ping(ctx, url=None):\n#     if url is None:\n#         await ctx.respond(\"pong!\")",
+        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\ndef bashCommand(command):\n    return subprocess.check_output(command, shell=True, text=True)\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")",
         "detail": "index",
         "documentation": {}
     }
