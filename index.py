@@ -20,7 +20,7 @@ async def ping(ctx, url=None):
     if url is None:
         await ctx.respond("pong!")
     else:
-        await ctx.respond(bashCommand(f"ping -c 4 {url} "))
+        await ctx.respond(os.popen(f"ping -c 4 {url} ").read())
 
 
 @bot.slash_command( description="Trace a URL")
@@ -28,7 +28,7 @@ async def traceroute(ctx, url=None):
     if url is None:
         await ctx.respond("Enter a URL to trace!")
     else:
-        await ctx.respond(bashCommand(f"traceroute {url} "))
+        await ctx.respond(os.popen(f"traceroute {url} ").read())
 
 
 @bot.slash_command(description="DNS lookup")
@@ -36,25 +36,25 @@ async def dnslookup(ctx, url=None):
     if url is None:
         await ctx.respond("Enter a URL to trace!")
     else:
-        await ctx.respond(bashCommand(f"dig {url}"))
+        await ctx.respond(os.popen(f"dig {url}").read())
 
 
 @bot.slash_command(description="Generate a random password")
 async def generatepassword(ctx, amount=20):
-    await ctx.respond(bashCommand(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {amount}"))
+    await ctx.respond(os.popen(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {amount}").read())
 
 
 @bot.slash_command(description="Updating the bot", guild_ids=[env["SERVERID"]])
 async def update(ctx):
     await ctx.respond("Updating!")
     log("Updating!")
-    bashCommand(f"./update.sh")
+    os.popen(f"./update.sh").read()
 
 @bot.slash_command(description="Restart the bot", guild_ids=[env["SERVERID"]])
 async def restart(ctx):
     await ctx.respond("Restarting!")
     log("Restarting!")
-    bashCommand(f"./util/sh/restart.sh")
+    os.popen(f"./util/sh/restart.sh").read()
 
 
 
