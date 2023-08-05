@@ -68,6 +68,22 @@
         "documentation": {}
     },
     {
+        "label": "log",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "bashCommand",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
         "label": "loadEnv",
         "importPath": "util.py.env",
         "description": "util.py.env",
@@ -98,7 +114,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    output = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    output.wait()\n    log(f\"Command: {command}\\nOutput: {output}\")\n    return output.stdout.read().decode(\"utf-8\")",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    output = subprocess.check_output(command, shell=True, text=True)\n    print(f\"3Command: {output}\")\n    # log(f\"Command: {command}\\nOutput: {output}\")\n    return output",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -107,7 +123,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def bashCommand(command):\n    output = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    output.wait()\n    log(f\"Command: {command}\\nOutput: {output}\")\n    return output.stdout.read().decode(\"utf-8\")",
+        "peekOfCode": "def bashCommand(command):\n    output = subprocess.check_output(command, shell=True, text=True)\n    print(f\"3Command: {output}\")\n    # log(f\"Command: {command}\\nOutput: {output}\")\n    return output",
         "detail": "util.py.helper",
         "documentation": {}
     },
