@@ -26,8 +26,8 @@ async def ping(ctx, url=None):
     if url is None:
         await ctx.respond("pong!")
     else:
-        bashCommand(f"ping -c 4 {url}")
         await ctx.defer()
+        bashCommand(f"ping -c 4 {url}")
         await ctx.respond("notpong")
         await ctx.send("notpong")
 
