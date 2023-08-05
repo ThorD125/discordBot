@@ -115,7 +115,7 @@
         "kind": 2,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "def bashCommand(command):\n    return subprocess.call(command.split(\" \"))\n@bot.slash_command()\nasync def ping(ctx, url=None):\n    log(f\"URL: {url}\")\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        ctx.defer()\n        bashCommand(f\"ping -c 4 {url}\")",
+        "peekOfCode": "def bashCommand(command):\n    return subprocess.call(command.split(\" \"))\n@bot.slash_command()\nasync def ping(ctx, url=None):\n    log(f\"URL: {url}\")\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        bashCommand(f\"ping -c 4 {url}\")\n        await ctx.defer()",
         "detail": "index",
         "documentation": {}
     },
