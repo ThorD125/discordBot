@@ -64,7 +64,7 @@ async def update(ctx):
 @bot.slash_command()
 async def test(ctx):
     print("test")
-    await ctx.respond("test")
+    await ctx.respond("tessefsefest")
 
     
 
