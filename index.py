@@ -95,7 +95,7 @@ async def catfile(ctx,):
 @bot.slash_command(description="cat")
 async def caturl(ctx,):
     await ctx.defer()
-    await ctx.respond(url="https://cataas.com/cat")
+    await ctx.respond("https://cataas.com/cat")
 
 
 bot.run(env["TOKEN"])
