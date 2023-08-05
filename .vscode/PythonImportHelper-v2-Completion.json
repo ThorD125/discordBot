@@ -141,6 +141,14 @@
         "documentation": {}
     },
     {
+        "label": "url",
+        "importPath": "test",
+        "description": "test",
+        "isExtraImport": true,
+        "detail": "test",
+        "documentation": {}
+    },
+    {
         "label": "get_list_from_mariadb",
         "kind": 2,
         "importPath": "service.dbtest",
