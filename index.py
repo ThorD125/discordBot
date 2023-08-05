@@ -78,7 +78,13 @@ async def help(ctx):
 - /links
 """)
 
-
+@bot.slash_command(description="Is it down for everyone or just me?")
+async def isitdown(ctx, url=None):
+    if url is None:
+        await ctx.respond("Enter a URL to trace!")
+    else:
+        await ctx.defer()
+        await ctx.respond(bashCommand(f"curl https://monitor-api.vercel.app/api/public?url={url}"))
     
 
 
