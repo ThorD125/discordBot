@@ -17,7 +17,6 @@ async def on_ready():
 
 @bot.slash_command()
 async def ping(ctx, url=None):
-    log(f"URL: {url}")
     if url is None:
         await ctx.respond("pong!")
     else:
@@ -61,6 +60,23 @@ async def restart(ctx):
     log("Restarting!")
     bashCommand(f"./util/sh/restart.sh")
 
+@bot.slash_command(description="list some nice links")
+async def links(ctx):
+    await ctx.respond("""# links
+- https://www.thor-demeestere.be
+- https://github.com/ThorD125""")
+                      
+@bot.slash_command(description="list all commands")
+async def help(ctx):
+    await ctx.respond("""# commands
+- /ping
+- /traceroute
+- /dnslookup
+- /generatepassword
+- /update
+- /restart
+- /links
+""")
 
 
     
