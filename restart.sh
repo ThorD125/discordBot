@@ -5,3 +5,6 @@ if [ -n "$pids" ]; then
   kill -9 $pids
   sleep 1
 fi
+
+# Step 3: Execute the Python3 script
+python3 "$running_script" &
