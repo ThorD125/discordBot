@@ -215,7 +215,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
+        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\")).get(\"url\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -224,7 +224,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
+        "peekOfCode": "def CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\")).get(\"url\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -233,7 +233,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
+        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\")).get(\"url\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -242,7 +242,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
+        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\")).get(\"url\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -251,7 +251,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def GETCAT():\n    return bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s | jq -r '.[].url'\")",
+        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\")).get(\"url\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
