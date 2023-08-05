@@ -1,3 +1,5 @@
 from util.py.helper import log, bashCommand
 
-print(bashCommand("ping -c 4 google.com"))
+url = "https://google.com"
+
+print(bashCommand(f"curl https://monitor-api.vercel.app/api/public?url={url} -s"))

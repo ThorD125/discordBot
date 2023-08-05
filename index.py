@@ -84,7 +84,7 @@ async def isitdown(ctx, url=None):
         await ctx.respond("Enter a URL to trace!")
     else:
         await ctx.defer()
-        await ctx.respond(bashCommand(f"curl https://monitor-api.vercel.app/api/public?url={url}"))
+        await ctx.respond(bashCommand(f"curl https://monitor-api.vercel.app/api/public?url={url} -s"))
     
 
 
