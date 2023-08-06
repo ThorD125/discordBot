@@ -1,7 +1,7 @@
 import os
 import subprocess
 import json
-import util.py.helper
+from util.py.warframeConverter import (baro, events, sortie, cetus, vallis, arbitration, steelPath, archonHunt)
 
 
 def log(message):
@@ -40,8 +40,6 @@ def GETtetrio(user):
 
     tetrio = bashCommand(f"curl https://ch.tetr.io/api/users/{user} -s")
 
-    print(json.loads(tetrio).get("success"))
-
     if not json.loads(tetrio).get("success"):
         return "User not found!"
     else:
@@ -55,3 +53,13 @@ League:
     Rating: {tetrior.get("league").get("rating")}
     Percentile rank: {tetrior.get("league").get("percentile_rank")}
 ```"""
+
+def GETwf():
+    return f"""```yaml{baro()}
+events: {events()}
+sortie: {sortie()}
+{cetus()}
+{vallis()}
+UNSTABLE arbitration: {arbitration()}
+steelpath: {steelPath()}
+Archon Hunt: {archonHunt()}"""

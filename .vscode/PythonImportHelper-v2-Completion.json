@@ -52,12 +52,75 @@
         "documentation": {}
     },
     {
-        "label": "util.py.helper",
-        "kind": 6,
+        "label": "baro",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
         "isExtraImport": true,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "detail": "util.py.helper",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "events",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "sortie",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "cetus",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "vallis",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "arbitration",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "steelPath",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "archonHunt",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
         "documentation": {}
     },
     {
@@ -141,6 +204,14 @@
         "documentation": {}
     },
     {
+        "label": "GETwf",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
         "label": "bashCommand",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
@@ -155,78 +226,6 @@
         "importPath": "discord",
         "description": "discord",
         "detail": "discord",
-        "documentation": {}
-    },
-    {
-        "label": "baro",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "events",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "sortie",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "cetus",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "vallis",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "arbitration",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "steelPath",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "archonHunt",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
         "documentation": {}
     },
     {
@@ -322,7 +321,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))",
+        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -331,7 +330,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"",
+        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -340,7 +339,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")",
+        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -349,7 +348,16 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    print(json.loads(tetrio).get(\"success\"))\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml\n{user}'s stats:",
+        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml\n{user}'s stats:\nXP: {tetrior.get(\"xp\")}",
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "GETwf",
+        "kind": 2,
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\nUNSTABLE arbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}\"\"\"",
         "detail": "util.py.helper",
         "documentation": {}
     },

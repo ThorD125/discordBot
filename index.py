@@ -3,8 +3,7 @@ import discord
 import subprocess
 
 from util.py.helper import (bashCommand, CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
-    downisit, GETCAT, log, GETtetrio)
-from util.py.warframeConverter import (baro, events, sortie, cetus, vallis, arbitration, steelPath, archonHunt)
+    downisit, GETCAT, log, GETtetrio, GETwf)
 from util.py.env import loadEnv
 from test import url
 
@@ -106,14 +105,7 @@ async def tetrio(ctx, user=None):
 async def wf(ctx):
     log("wf")
     await ctx.defer()
-    await ctx.respond(f"""{baro()}
-events: {events()}
-sortie: {sortie()}
-{cetus()}
-{vallis()}
-UNSTABLE arbitration: {arbitration()}
-steelpath: {steelPath()}
-Archon Hunt: {archonHunt()}""")
+    await ctx.respond(GETwf())
 
 bot.run(env["TOKEN"])
 
