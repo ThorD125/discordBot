@@ -357,7 +357,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\nUNSTABLE arbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}\"\"\"",
+        "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\nUNSTABLE arbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}```\"\"\"",
         "detail": "util.py.helper",
         "documentation": {}
     },
