@@ -2,7 +2,7 @@ import json
 from util.py.helper import bashCommand
 
 def wfGet(data=None):
-    return bashCommand(f"curl -s https://api.warframestat.us/en/pc/{data} -L")
+    return bashCommand(f"curl -s https://api.warframestat.us/pc/en/{data} -L")
 
 def baro():
     voidTrader = json.loads(wfGet("voidTrader"))
