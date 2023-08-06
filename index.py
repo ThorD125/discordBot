@@ -15,8 +15,9 @@ bot = discord.Bot()
 
 
 @bot.event
-async def on_ready():
+async def on_ready(ctx):
     log(f"We have logged in as {bot.user}")
+    ctx.send(f"We have logged back in")
 
 @bot.slash_command(description="Pong a URL")
 async def ping(ctx, url=None):
