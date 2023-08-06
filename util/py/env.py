@@ -1,5 +1,7 @@
 from dotenv import load_dotenv
 import os
+from util.py.helper import log
+
 
 def loadEnv():
     load_dotenv()
@@ -13,5 +15,5 @@ def loadEnv():
             exit(1)
         else:
             returner[key.upper()] = getKey
-    
+    print(returner)
     return returner

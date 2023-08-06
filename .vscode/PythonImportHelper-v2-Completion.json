@@ -34,153 +34,7 @@
         "documentation": {}
     },
     {
-        "label": "subprocess",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "baro",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "events",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "sortie",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "cetus",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "vallis",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "arbitration",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "steelPath",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "archonHunt",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "bashCommand",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "bashCommand",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "CMDdig",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "CMDping",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "CMDranGenPassword",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "CMDtraceroute",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "downisit",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "GETCAT",
+        "label": "log",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
         "isExtraImport": true,
@@ -196,15 +50,7 @@
         "documentation": {}
     },
     {
-        "label": "GETtetrio",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "GETwf",
+        "label": "bashCommand",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
         "isExtraImport": true,
@@ -220,28 +66,21 @@
         "documentation": {}
     },
     {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
         "label": "discord",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "discord",
         "description": "discord",
         "detail": "discord",
-        "documentation": {}
-    },
-    {
-        "label": "update",
-        "importPath": "util.py.setup",
-        "description": "util.py.setup",
-        "isExtraImport": true,
-        "detail": "util.py.setup",
-        "documentation": {}
-    },
-    {
-        "label": "restart",
-        "importPath": "util.py.setup",
-        "description": "util.py.setup",
-        "isExtraImport": true,
-        "detail": "util.py.setup",
         "documentation": {}
     },
     {
@@ -253,11 +92,28 @@
         "documentation": {}
     },
     {
-        "label": "url",
-        "importPath": "test",
-        "description": "test",
+        "label": "CMDping",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
         "isExtraImport": true,
-        "detail": "test",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
         "documentation": {}
     },
     {
@@ -267,6 +123,87 @@
         "description": "service.dbtest",
         "peekOfCode": "def get_list_from_mariadb(column=\"*\", table=\"text\"):\n    try:\n        load_dotenv()\n        host=os.getenv(\"host\")\n        user=os.getenv(\"user\")\n        password=os.getenv(\"password\")\n        database=os.getenv(\"database\")\n        if host is None or user is None or password is None or database is None:\n            print(\"Error: Bot token not found in .env file.\")\n            exit(1)",
         "detail": "service.dbtest",
+        "documentation": {}
+    },
+    {
+        "label": "commandFilter",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "downisit",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "CMDping",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "CMDtraceroute",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "CMDdig",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "CMDranGenPassword",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "GETCAT",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "GETtetrio",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml\n{user}'s stats:\nXP: {tetrior.get(\"xp\")}",
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "GETwf",
+        "kind": 2,
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\nUNSTABLE arbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}```\"\"\"",
+        "detail": "util.py.commands",
         "documentation": {}
     },
     {
@@ -283,7 +220,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)",
+        "peekOfCode": "def log(message):\n    os.popen(f\"wall {message}\")\ndef bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -292,88 +229,7 @@
         "kind": 2,
         "importPath": "util.py.helper",
         "description": "util.py.helper",
-        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")\ndef commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "commandFilter",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def commandFilter(input):\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "downisit",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "CMDping",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "CMDtraceroute",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def CMDtraceroute(url):\n    return bashCommand(f\"traceroute {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "CMDdig",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "CMDranGenPassword",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "GETCAT",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "GETtetrio",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml\n{user}'s stats:\nXP: {tetrior.get(\"xp\")}",
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "GETwf",
-        "kind": 2,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\nUNSTABLE arbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}```\"\"\"",
+        "peekOfCode": "def bashCommand(command):\n    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\n    process.wait()\n    return process.stdout.read().decode(\"utf-8\")",
         "detail": "util.py.helper",
         "documentation": {}
     },
@@ -479,19 +335,19 @@
     {
         "label": "env",
         "kind": 5,
-        "importPath": "index",
-        "description": "index",
-        "peekOfCode": "env = loadEnv()\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:",
-        "detail": "index",
+        "importPath": "init",
+        "description": "init",
+        "peekOfCode": "env = loadEnv()\nbot = discord.Bot()\nprint(\"Logging in...\")\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\nprint(\"Logging in...\")\n# @bot.slash_command(description=\"Pong a URL\")\n# async def ping(ctx, url=None):\n#     if url is None:",
+        "detail": "init",
         "documentation": {}
     },
     {
         "label": "bot",
         "kind": 5,
-        "importPath": "index",
-        "description": "index",
-        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.defer()",
-        "detail": "index",
+        "importPath": "init",
+        "description": "init",
+        "peekOfCode": "bot = discord.Bot()\nprint(\"Logging in...\")\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\nprint(\"Logging in...\")\n# @bot.slash_command(description=\"Pong a URL\")\n# async def ping(ctx, url=None):\n#     if url is None:\n#         await ctx.respond(\"pong!\")",
+        "detail": "init",
         "documentation": {}
     },
     {
