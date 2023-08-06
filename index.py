@@ -4,7 +4,7 @@ import subprocess
 
 from util.py.helper import (bashCommand, CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
     downisit, GETCAT, log, GETtetrio)
-from util.py.warframeConverter import (baro, events, sortie, cetus, vallis, arbitration, steelPath, archonHunt)
+import util.py.warframeConverter
 from util.py.env import loadEnv
 from test import url
 
@@ -15,9 +15,8 @@ bot = discord.Bot()
 
 
 @bot.event
-async def on_ready(ctx):
+async def on_ready():
     log(f"We have logged in as {bot.user}")
-    ctx.send(f"We have logged back in")
 
 @bot.slash_command(description="Pong a URL")
 async def ping(ctx, url=None):
