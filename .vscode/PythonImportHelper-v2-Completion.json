@@ -50,6 +50,14 @@
         "documentation": {}
     },
     {
+        "label": "bashCommand",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
         "label": "log",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
@@ -170,6 +178,22 @@
         "description": "util.py.commands",
         "isExtraImport": true,
         "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "updateSET",
+        "importPath": "util.py.setup",
+        "description": "util.py.setup",
+        "isExtraImport": true,
+        "detail": "util.py.setup",
+        "documentation": {}
+    },
+    {
+        "label": "restartSET",
+        "importPath": "util.py.setup",
+        "description": "util.py.setup",
+        "isExtraImport": true,
+        "detail": "util.py.setup",
         "documentation": {}
     },
     {
@@ -307,20 +331,20 @@
         "documentation": {}
     },
     {
-        "label": "update",
+        "label": "updateSET",
         "kind": 2,
         "importPath": "util.py.setup",
         "description": "util.py.setup",
-        "peekOfCode": "def update():\n    bashCommand(f\"./update.sh\")\ndef restart():\n    bashCommand(f\"./util/sh/restart.sh\")",
+        "peekOfCode": "def updateSET():\n    bashCommand(f\"./update.sh\")\ndef restartSET():\n    bashCommand(f\"./util/sh/restart.sh\")",
         "detail": "util.py.setup",
         "documentation": {}
     },
     {
-        "label": "restart",
+        "label": "restartSET",
         "kind": 2,
         "importPath": "util.py.setup",
         "description": "util.py.setup",
-        "peekOfCode": "def restart():\n    bashCommand(f\"./util/sh/restart.sh\")",
+        "peekOfCode": "def restartSET():\n    bashCommand(f\"./util/sh/restart.sh\")",
         "detail": "util.py.setup",
         "documentation": {}
     },

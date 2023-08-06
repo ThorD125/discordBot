@@ -4,6 +4,7 @@ import subprocess
 from util.py.helper import log, bashCommand
 from util.py.env import loadEnv
 from util.py.commands import CMDping, CMDtraceroute, CMDdig, CMDranGenPassword, downisit, GETCAT, GETtetrio, GETwf
+from util.py.setup import updateSET, restartSET
 
 env = loadEnv()
 
@@ -53,14 +54,14 @@ async def generatepassword(ctx, amount=20):
 async def update(ctx):
     await ctx.respond("Updating!")
     log("Updating!")
-    update()
+    updateSET()
 
 
 @bot.slash_command(description="Restart the bot")
 async def restart(ctx):
     await ctx.respond("Restarting!")
     log("Restarting!")
-    restart()
+    restartSET()
 
 
 @bot.slash_command(description="list some nice links")
