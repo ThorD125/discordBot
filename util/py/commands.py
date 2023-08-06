@@ -7,6 +7,10 @@ def commandFilter(input):
     return input.replace(" ", "").replace("\n", "").replace("\t", "").split("&&")[0]
 
 
+def numberFilter(input):
+    return int(input)
+
+
 def downisit(url):
     url = commandFilter(url)
     return f"{url} is down!" if json.loads(bashCommand(f"curl https://monitor-api.vercel.app/api/public?url={url} -s")).get("isDown") else f"{url} is up!"
@@ -16,7 +20,7 @@ def CMDping(url):
     return bashCommand(f"ping -c 4 {commandFilter(url)}")
 
 
-def CMDtraceroute(url, amount=30):
+def CMDtraceroute(url, amount=15):
     return bashCommand(f"traceroute -4 {commandFilter(url)} -m {amount}")
 
 
@@ -24,8 +28,8 @@ def CMDdig(url):
     return bashCommand(f"dig {commandFilter(url)}")
 
 
-def CMDranGenPassword(amount):
-    return bashCommand(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}")
+def CMDranGenPassword(amount=20):
+    return bashCommand(f"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\-_=+~:;*&^%$#@()[]' | head -c {numberFilter(amount)}")
 
 
 def GETCAT():
