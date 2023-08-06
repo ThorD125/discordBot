@@ -172,20 +172,11 @@
         "documentation": {}
     },
     {
-        "label": "discord",
-        "kind": 6,
+        "label": "bashCommand",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
         "isExtraImport": true,
-        "importPath": "discord",
-        "description": "discord",
-        "detail": "discord",
-        "documentation": {}
-    },
-    {
-        "label": "loadEnv",
-        "importPath": "util.py.env",
-        "description": "util.py.env",
-        "isExtraImport": true,
-        "detail": "util.py.env",
+        "detail": "util.py.commands",
         "documentation": {}
     },
     {
@@ -250,6 +241,23 @@
         "description": "util.py.commands",
         "isExtraImport": true,
         "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "loadEnv",
+        "importPath": "util.py.env",
+        "description": "util.py.env",
+        "isExtraImport": true,
+        "detail": "util.py.env",
         "documentation": {}
     },
     {
