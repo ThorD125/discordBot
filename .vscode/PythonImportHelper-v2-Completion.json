@@ -91,6 +91,70 @@
         "documentation": {}
     },
     {
+        "label": "baro",
+        "importPath": "util.py.warframe",
+        "description": "util.py.warframe",
+        "isExtraImport": true,
+        "detail": "util.py.warframe",
+        "documentation": {}
+    },
+    {
+        "label": "events",
+        "importPath": "util.py.warframe",
+        "description": "util.py.warframe",
+        "isExtraImport": true,
+        "detail": "util.py.warframe",
+        "documentation": {}
+    },
+    {
+        "label": "sortie",
+        "importPath": "util.py.warframe",
+        "description": "util.py.warframe",
+        "isExtraImport": true,
+        "detail": "util.py.warframe",
+        "documentation": {}
+    },
+    {
+        "label": "cetus",
+        "importPath": "util.py.warframe",
+        "description": "util.py.warframe",
+        "isExtraImport": true,
+        "detail": "util.py.warframe",
+        "documentation": {}
+    },
+    {
+        "label": "vallis",
+        "importPath": "util.py.warframe",
+        "description": "util.py.warframe",
+        "isExtraImport": true,
+        "detail": "util.py.warframe",
+        "documentation": {}
+    },
+    {
+        "label": "arbitration",
+        "importPath": "util.py.warframe",
+        "description": "util.py.warframe",
+        "isExtraImport": true,
+        "detail": "util.py.warframe",
+        "documentation": {}
+    },
+    {
+        "label": "steelPath",
+        "importPath": "util.py.warframe",
+        "description": "util.py.warframe",
+        "isExtraImport": true,
+        "detail": "util.py.warframe",
+        "documentation": {}
+    },
+    {
+        "label": "archonHunt",
+        "importPath": "util.py.warframe",
+        "description": "util.py.warframe",
+        "isExtraImport": true,
+        "detail": "util.py.warframe",
+        "documentation": {}
+    },
+    {
         "label": "subprocess",
         "kind": 6,
         "isExtraImport": true,
