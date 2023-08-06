@@ -108,6 +108,62 @@
         "documentation": {}
     },
     {
+        "label": "CMDtraceroute",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "isExtraImport": true,
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "CMDdig",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "isExtraImport": true,
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "CMDranGenPassword",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "isExtraImport": true,
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "downisit",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "isExtraImport": true,
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "GETCAT",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "isExtraImport": true,
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "GETtetrio",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "isExtraImport": true,
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
+        "label": "GETwf",
+        "importPath": "util.py.commands",
+        "description": "util.py.commands",
+        "isExtraImport": true,
+        "detail": "util.py.commands",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
