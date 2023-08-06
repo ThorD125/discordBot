@@ -74,6 +74,15 @@
         "documentation": {}
     },
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "subprocess",
         "kind": 6,
         "isExtraImport": true,
@@ -161,15 +170,6 @@
         "description": "util.py.commands",
         "isExtraImport": true,
         "detail": "util.py.commands",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
         "documentation": {}
     },
     {
