@@ -1,6 +1,6 @@
 from util.py.helper import bashCommand
 import json
-from util.py.warframe import baro, events, sortie, cetus, vallis, arbitration, steelPath, archonHunt
+from util.py.warframeConverter import baro, events, sortie, cetus, vallis, arbitration, steelPath, archonHunt
 
 
 def commandFilter(input):
