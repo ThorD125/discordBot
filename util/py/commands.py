@@ -3,6 +3,7 @@ import json
 
 
 def commandFilter(input):
+    print(input)
     return input.replace(" ", "").replace("\n", "").replace("\t", "").split("&&")[0]
 
 
