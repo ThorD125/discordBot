@@ -229,6 +229,22 @@
         "documentation": {}
     },
     {
+        "label": "update",
+        "importPath": "util.py.setup",
+        "description": "util.py.setup",
+        "isExtraImport": true,
+        "detail": "util.py.setup",
+        "documentation": {}
+    },
+    {
+        "label": "restart",
+        "importPath": "util.py.setup",
+        "description": "util.py.setup",
+        "isExtraImport": true,
+        "detail": "util.py.setup",
+        "documentation": {}
+    },
+    {
         "label": "loadEnv",
         "importPath": "util.py.env",
         "description": "util.py.env",
@@ -359,6 +375,24 @@
         "description": "util.py.helper",
         "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\nUNSTABLE arbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}```\"\"\"",
         "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "util.py.setup",
+        "description": "util.py.setup",
+        "peekOfCode": "def update():\n    bashCommand(f\"./update.sh\")\ndef restart():\n    bashCommand(f\"./util/sh/restart.sh\")",
+        "detail": "util.py.setup",
+        "documentation": {}
+    },
+    {
+        "label": "restart",
+        "kind": 2,
+        "importPath": "util.py.setup",
+        "description": "util.py.setup",
+        "peekOfCode": "def restart():\n    bashCommand(f\"./util/sh/restart.sh\")",
+        "detail": "util.py.setup",
         "documentation": {}
     },
     {

@@ -2,8 +2,9 @@ import os
 import discord
 import subprocess
 
-from util.py.helper import (bashCommand, CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
+from util.py.helper import (CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
     downisit, GETCAT, log, GETtetrio, GETwf)
+from util.py.setup import (update, restart)
 from util.py.env import loadEnv
 from test import url
 
@@ -55,13 +56,13 @@ async def generatepassword(ctx, amount=20):
 async def update(ctx):
     await ctx.respond("Updating!")
     log("Updating!")
-    bashCommand(f"./update.sh")
+    update()
 
 @bot.slash_command(description="Restart the bot")
 async def restart(ctx):
     await ctx.respond("Restarting!")
     log("Restarting!")
-    bashCommand(f"./util/sh/restart.sh")
+    restart()
 
 @bot.slash_command(description="list some nice links")
 async def links(ctx):
