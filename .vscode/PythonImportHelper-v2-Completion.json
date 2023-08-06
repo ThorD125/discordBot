@@ -358,7 +358,7 @@
         "kind": 2,
         "importPath": "util.py.warframeConverter",
         "description": "util.py.warframeConverter",
-        "peekOfCode": "def wfGet(data=None):\n    return bashCommand(f\"curl -s https://api.warframestat.us/pc/{data} -L\")\ndef baro():\n    voidTrader = json.loads(wfGet(\"voidTrader\"))\n    if voidTrader.get(\"active\"):\n        return f\"\"\"{voidTrader.get(\"character\")} in {voidTrader.get(\"endString\")}: {[item.get(\"item\") for item in voidTrader.get(\"inventory\")]}\"\"\"\n    else:\n        return f\"\"\"{voidTrader.get(\"character\")} in {voidTrader.get(\"startString\")}\"\"\"\ndef events():\n    events = json.loads(wfGet(\"events\"))",
+        "peekOfCode": "def wfGet(data=None):\n    return bashCommand(f\"curl -s https://api.warframestat.us/en/pc/{data} -L\")\ndef baro():\n    voidTrader = json.loads(wfGet(\"voidTrader\"))\n    if voidTrader.get(\"active\"):\n        return f\"\"\"{voidTrader.get(\"character\")} in {voidTrader.get(\"endString\")}: {[item.get(\"item\") for item in voidTrader.get(\"inventory\")]}\"\"\"\n    else:\n        return f\"\"\"{voidTrader.get(\"character\")} in {voidTrader.get(\"startString\")}\"\"\"\ndef events():\n    events = json.loads(wfGet(\"events\"))",
         "detail": "util.py.warframeConverter",
         "documentation": {}
     },
