@@ -124,12 +124,11 @@
         "documentation": {}
     },
     {
-        "label": "discord",
-        "kind": 6,
+        "label": "bashCommand",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
         "isExtraImport": true,
-        "importPath": "discord",
-        "description": "discord",
-        "detail": "discord",
+        "detail": "util.py.helper",
         "documentation": {}
     },
     {
@@ -218,6 +217,15 @@
         "description": "util.py.helper",
         "isExtraImport": true,
         "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
         "documentation": {}
     },
     {
