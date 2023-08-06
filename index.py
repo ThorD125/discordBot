@@ -4,7 +4,7 @@ import subprocess
 
 from util.py.helper import (bashCommand, CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
     downisit, GETCAT, log, GETtetrio)
-import util.py.warframeConverter
+from util.py.warframeConverter import (baro, events, sortie, cetus, vallis, arbitration, steelPath, archonHunt)
 from util.py.env import loadEnv
 from test import url
 

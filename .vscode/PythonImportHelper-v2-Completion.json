@@ -158,11 +158,66 @@
         "documentation": {}
     },
     {
-        "label": "util.py.warframeConverter",
-        "kind": 6,
-        "isExtraImport": true,
+        "label": "baro",
         "importPath": "util.py.warframeConverter",
         "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "events",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "sortie",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "cetus",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "vallis",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "arbitration",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "steelPath",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "archonHunt",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
         "detail": "util.py.warframeConverter",
         "documentation": {}
     },
