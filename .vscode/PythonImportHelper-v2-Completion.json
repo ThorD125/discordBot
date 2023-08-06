@@ -194,7 +194,7 @@
         "kind": 2,
         "importPath": "util.py.commands",
         "description": "util.py.commands",
-        "peekOfCode": "def commandFilter(input):\n    print(input)\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute -4 {commandFilter(url)} \")",
+        "peekOfCode": "def commandFilter(input):\n    print(input)\n    return input.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").split(\"&&\")[0]\ndef downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url, amount=30):\n    return bashCommand(f\"traceroute -4 {commandFilter(url)} -m {amount}\")",
         "detail": "util.py.commands",
         "documentation": {}
     },
@@ -203,7 +203,7 @@
         "kind": 2,
         "importPath": "util.py.commands",
         "description": "util.py.commands",
-        "peekOfCode": "def downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute -4 {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):",
+        "peekOfCode": "def downisit(url):\n    url = commandFilter(url)\n    return f\"{url} is down!\" if json.loads(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\")).get(\"isDown\") else f\"{url} is up!\"\ndef CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url, amount=30):\n    return bashCommand(f\"traceroute -4 {commandFilter(url)} -m {amount}\")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):",
         "detail": "util.py.commands",
         "documentation": {}
     },
@@ -212,7 +212,7 @@
         "kind": 2,
         "importPath": "util.py.commands",
         "description": "util.py.commands",
-        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url):\n    return bashCommand(f\"traceroute -4 {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")",
+        "peekOfCode": "def CMDping(url):\n    return bashCommand(f\"ping -c 4 {commandFilter(url)}\")\ndef CMDtraceroute(url, amount=30):\n    return bashCommand(f\"traceroute -4 {commandFilter(url)} -m {amount}\")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")",
         "detail": "util.py.commands",
         "documentation": {}
     },
@@ -221,7 +221,7 @@
         "kind": 2,
         "importPath": "util.py.commands",
         "description": "util.py.commands",
-        "peekOfCode": "def CMDtraceroute(url):\n    return bashCommand(f\"traceroute -4 {commandFilter(url)} \")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)",
+        "peekOfCode": "def CMDtraceroute(url, amount=30):\n    return bashCommand(f\"traceroute -4 {commandFilter(url)} -m {amount}\")\ndef CMDdig(url):\n    return bashCommand(f\"dig {commandFilter(url)}\")\ndef CMDranGenPassword(amount):\n    return bashCommand(f\"cat /dev/urandom | tr -dc 'A-Za-z0-9!?><,./\\-_=+~:;*&^%$#@()[]' | head -c {commandFilter(amount)}\")\ndef GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)",
         "detail": "util.py.commands",
         "documentation": {}
     },

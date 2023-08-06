@@ -16,8 +16,8 @@ def CMDping(url):
     return bashCommand(f"ping -c 4 {commandFilter(url)}")
 
 
-def CMDtraceroute(url):
-    return bashCommand(f"traceroute -4 {commandFilter(url)} ")
+def CMDtraceroute(url, amount=30):
+    return bashCommand(f"traceroute -4 {commandFilter(url)} -m {amount}")
 
 
 def CMDdig(url):

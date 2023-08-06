@@ -25,12 +25,12 @@ async def ping(ctx, url=None):
 
 
 @bot.slash_command(description="Trace a URL")
-async def traceroute(ctx, url=None):
+async def traceroute(ctx, url=None, amount=30):
     if url is None:
         await ctx.respond("Enter a URL to trace!")
     else:
         await ctx.defer()
-        await ctx.respond(CMDtraceroute(url))
+        await ctx.respond(CMDtraceroute(url, amount))
 
 
 @bot.slash_command(description="DNS lookup")
