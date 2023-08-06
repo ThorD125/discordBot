@@ -1,10 +1,7 @@
-import os
 import discord
-import subprocess
 
-from util.py.helper import (CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
-    downisit, GETCAT, log, GETtetrio, GETwf)
 from util.py.setup import (update, restart)
+from util.py.helper import (CMDdig, CMDping, CMDranGenPassword, CMDtraceroute, downisit, GETCAT, log, GETtetrio, GETwf)
 from util.py.env import loadEnv
 from test import url
 

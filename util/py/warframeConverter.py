@@ -1,6 +1,6 @@
 import json
 from util.py.helper import (bashCommand)
-                            
+
 def wfGet(data=None):
     return bashCommand(f"curl -s https://api.warframestat.us/pc/en/{data} -L")
 
