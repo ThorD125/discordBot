@@ -371,7 +371,7 @@
         "kind": 2,
         "importPath": "util.py.commands",
         "description": "util.py.commands",
-        "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\nUNSTABLE arbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}```\"\"\"",
+        "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\narbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}```\"\"\"",
         "detail": "util.py.commands",
         "documentation": {}
     },
@@ -470,7 +470,7 @@
         "kind": 2,
         "importPath": "util.py.warframeConverter",
         "description": "util.py.warframeConverter",
-        "peekOfCode": "def vallis():\n    vallis = json.loads(wfGet(\"vallisCycle\"))\n    return f\"\"\"Fortuna: {vallis.get(\"state\")} for {vallis.get(\"timeLeft\")}\"\"\"\ndef arbitration():\n    arbitration = json.loads(wfGet(\"arbitration\"))\n    return f\"\"\"{arbitration.get(\"enemy\")}: {arbitration.get(\"type\")} until {arbitration.get(\"expiry\").split(\"T\")[1].split(\".\")[0]}\"\"\"\ndef steelPath():\n    steelPath = json.loads(wfGet(\"steelPath\"))\n    return f\"\"\"{steelPath.get(\"currentReward\").get(\"name\")} for {steelPath.get(\"remaining\")}\"\"\"\ndef archonHunt():",
+        "peekOfCode": "def vallis():\n    vallis = json.loads(wfGet(\"vallisCycle\"))\n    return f\"\"\"Fortuna: {vallis.get(\"state\")} for {vallis.get(\"timeLeft\")}\"\"\"\ndef arbitration():\n    arbitration = json.loads(wfGet(\"arbitration\"))\n    try:\n        return f\"\"\"{arbitration.get(\"enemy\")}: {arbitration.get(\"type\")} until {arbitration.get(\"expiry\").split(\"T\")[1].split(\".\")[0]}\"\"\"\n    except:\n        return f\"\"\"[UNSTABLE], NODATA\"\"\"\ndef steelPath():",
         "detail": "util.py.warframeConverter",
         "documentation": {}
     },
@@ -479,7 +479,7 @@
         "kind": 2,
         "importPath": "util.py.warframeConverter",
         "description": "util.py.warframeConverter",
-        "peekOfCode": "def arbitration():\n    arbitration = json.loads(wfGet(\"arbitration\"))\n    return f\"\"\"{arbitration.get(\"enemy\")}: {arbitration.get(\"type\")} until {arbitration.get(\"expiry\").split(\"T\")[1].split(\".\")[0]}\"\"\"\ndef steelPath():\n    steelPath = json.loads(wfGet(\"steelPath\"))\n    return f\"\"\"{steelPath.get(\"currentReward\").get(\"name\")} for {steelPath.get(\"remaining\")}\"\"\"\ndef archonHunt():\n    archonHunt = json.loads(wfGet(\"archonHunt\"))\n    return f\"\"\"{archonHunt.get(\"boss\")} for {archonHunt.get(\"eta\")}: {[mission.get(\"typeKey\") for mission in archonHunt.get(\"missions\")]}\"\"\"",
+        "peekOfCode": "def arbitration():\n    arbitration = json.loads(wfGet(\"arbitration\"))\n    try:\n        return f\"\"\"{arbitration.get(\"enemy\")}: {arbitration.get(\"type\")} until {arbitration.get(\"expiry\").split(\"T\")[1].split(\".\")[0]}\"\"\"\n    except:\n        return f\"\"\"[UNSTABLE], NODATA\"\"\"\ndef steelPath():\n    steelPath = json.loads(wfGet(\"steelPath\"))\n    return f\"\"\"{steelPath.get(\"currentReward\").get(\"name\")} for {steelPath.get(\"remaining\")}\"\"\"\ndef archonHunt():",
         "detail": "util.py.warframeConverter",
         "documentation": {}
     },

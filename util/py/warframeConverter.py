@@ -38,7 +38,10 @@ def vallis():
 
 def arbitration():
     arbitration = json.loads(wfGet("arbitration"))
-    return f"""{arbitration.get("enemy")}: {arbitration.get("type")} until {arbitration.get("expiry").split("T")[1].split(".")[0]}"""
+    try:
+        return f"""{arbitration.get("enemy")}: {arbitration.get("type")} until {arbitration.get("expiry").split("T")[1].split(".")[0]}"""
+    except:
+        return f"""[UNSTABLE], NODATA"""
 
 
 def steelPath():

@@ -63,6 +63,6 @@ events: {events()}
 sortie: {sortie()}
 {cetus()}
 {vallis()}
-UNSTABLE arbitration: {arbitration()}
+arbitration: {arbitration()}
 steelpath: {steelPath()}
 Archon Hunt: {archonHunt()}```"""
