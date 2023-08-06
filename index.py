@@ -109,7 +109,6 @@ async def tetrio(ctx, user=None):
 
 @bot.slash_command(description="Get a wf status")
 async def wf(ctx):
-    log("wf")
     await ctx.defer()
     await ctx.respond(GETwf())
 
