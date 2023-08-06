@@ -69,6 +69,14 @@
         "documentation": {}
     },
     {
+        "label": "bashCommand",
+        "importPath": "util.py.helper",
+        "description": "util.py.helper",
+        "isExtraImport": true,
+        "detail": "util.py.helper",
+        "documentation": {}
+    },
+    {
         "label": "CMDdig",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
@@ -133,14 +141,6 @@
         "documentation": {}
     },
     {
-        "label": "log",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
         "label": "bashCommand",
         "importPath": "util.py.helper",
         "description": "util.py.helper",
@@ -155,6 +155,78 @@
         "importPath": "discord",
         "description": "discord",
         "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "baro",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "events",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "sortie",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "cetus",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "vallis",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "arbitration",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "steelPath",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "archonHunt",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
         "documentation": {}
     },
     {
@@ -282,6 +354,87 @@
         "documentation": {}
     },
     {
+        "label": "wfGet",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def wfGet(data=None):\n    return bashCommand(f\"curl -s https://api.warframestat.us/pc/{data} -L\")\ndef baro():\n    voidTrader = json.loads(wfGet(\"voidTrader\"))\n    if voidTrader.get(\"active\"):\n        return f\"\"\"{voidTrader.get(\"character\")} in {voidTrader.get(\"endString\")}: {[item.get(\"item\") for item in voidTrader.get(\"inventory\")]}\"\"\"\n    else:\n        return f\"\"\"{voidTrader.get(\"character\")} in {voidTrader.get(\"startString\")}\"\"\"\ndef events():\n    events = json.loads(wfGet(\"events\"))",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "baro",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def baro():\n    voidTrader = json.loads(wfGet(\"voidTrader\"))\n    if voidTrader.get(\"active\"):\n        return f\"\"\"{voidTrader.get(\"character\")} in {voidTrader.get(\"endString\")}: {[item.get(\"item\") for item in voidTrader.get(\"inventory\")]}\"\"\"\n    else:\n        return f\"\"\"{voidTrader.get(\"character\")} in {voidTrader.get(\"startString\")}\"\"\"\ndef events():\n    events = json.loads(wfGet(\"events\"))\n    return f\"\"\"{[f'{event.get(\"description\")}: {[reward.get(\"items\") for reward in event.get(\"rewards\")]}' for event in events]}\"\"\"\ndef sortie():",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "events",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def events():\n    events = json.loads(wfGet(\"events\"))\n    return f\"\"\"{[f'{event.get(\"description\")}: {[reward.get(\"items\") for reward in event.get(\"rewards\")]}' for event in events]}\"\"\"\ndef sortie():\n    sortie = json.loads(wfGet(\"sortie\"))\n    return f\"\"\"{sortie.get(\"faction\")}-{sortie.get(\"boss\")}: {[variant.get(\"missionType\") for variant in sortie.get(\"variants\")]}\"\"\"\ndef cetus():\n    cetus = json.loads(wfGet(\"cetusCycle\"))\n    if cetus.get(\"state\") == \"day\":\n        return f\"\"\"Cetus: No Eidolon for {cetus.get(\"timeLeft\")}\"\"\"",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "sortie",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def sortie():\n    sortie = json.loads(wfGet(\"sortie\"))\n    return f\"\"\"{sortie.get(\"faction\")}-{sortie.get(\"boss\")}: {[variant.get(\"missionType\") for variant in sortie.get(\"variants\")]}\"\"\"\ndef cetus():\n    cetus = json.loads(wfGet(\"cetusCycle\"))\n    if cetus.get(\"state\") == \"day\":\n        return f\"\"\"Cetus: No Eidolon for {cetus.get(\"timeLeft\")}\"\"\"\n    return f\"\"\"Cetus: An Eidolon for {cetus.get(\"timeLeft\")}\"\"\"\ndef vallis():\n    vallis = json.loads(wfGet(\"vallisCycle\"))",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "cetus",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def cetus():\n    cetus = json.loads(wfGet(\"cetusCycle\"))\n    if cetus.get(\"state\") == \"day\":\n        return f\"\"\"Cetus: No Eidolon for {cetus.get(\"timeLeft\")}\"\"\"\n    return f\"\"\"Cetus: An Eidolon for {cetus.get(\"timeLeft\")}\"\"\"\ndef vallis():\n    vallis = json.loads(wfGet(\"vallisCycle\"))\n    return f\"\"\"Fortuna: {vallis.get(\"state\")} for {vallis.get(\"timeLeft\")}\"\"\"\ndef arbitration():\n    arbitration = json.loads(wfGet(\"arbitration\"))",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "vallis",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def vallis():\n    vallis = json.loads(wfGet(\"vallisCycle\"))\n    return f\"\"\"Fortuna: {vallis.get(\"state\")} for {vallis.get(\"timeLeft\")}\"\"\"\ndef arbitration():\n    arbitration = json.loads(wfGet(\"arbitration\"))\n    return f\"\"\"{arbitration.get(\"enemy\")}: {arbitration.get(\"type\")} until {arbitration.get(\"expiry\").split(\"T\")[1].split(\".\")[0]}\"\"\"\ndef steelPath():\n    steelPath = json.loads(wfGet(\"steelPath\"))\n    return f\"\"\"{steelPath.get(\"currentReward\").get(\"name\")} for {steelPath.get(\"remaining\")}\"\"\"\ndef archonHunt():",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "arbitration",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def arbitration():\n    arbitration = json.loads(wfGet(\"arbitration\"))\n    return f\"\"\"{arbitration.get(\"enemy\")}: {arbitration.get(\"type\")} until {arbitration.get(\"expiry\").split(\"T\")[1].split(\".\")[0]}\"\"\"\ndef steelPath():\n    steelPath = json.loads(wfGet(\"steelPath\"))\n    return f\"\"\"{steelPath.get(\"currentReward\").get(\"name\")} for {steelPath.get(\"remaining\")}\"\"\"\ndef archonHunt():\n    archonHunt = json.loads(wfGet(\"archonHunt\"))\n    return f\"\"\"{archonHunt.get(\"boss\")} for {archonHunt.get(\"eta\")}: {[mission.get(\"typeKey\") for mission in archonHunt.get(\"missions\")]}\"\"\"",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "steelPath",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def steelPath():\n    steelPath = json.loads(wfGet(\"steelPath\"))\n    return f\"\"\"{steelPath.get(\"currentReward\").get(\"name\")} for {steelPath.get(\"remaining\")}\"\"\"\ndef archonHunt():\n    archonHunt = json.loads(wfGet(\"archonHunt\"))\n    return f\"\"\"{archonHunt.get(\"boss\")} for {archonHunt.get(\"eta\")}: {[mission.get(\"typeKey\") for mission in archonHunt.get(\"missions\")]}\"\"\"",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "archonHunt",
+        "kind": 2,
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "peekOfCode": "def archonHunt():\n    archonHunt = json.loads(wfGet(\"archonHunt\"))\n    return f\"\"\"{archonHunt.get(\"boss\")} for {archonHunt.get(\"eta\")}: {[mission.get(\"typeKey\") for mission in archonHunt.get(\"missions\")]}\"\"\"",
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
         "label": "env",
         "kind": 5,
         "importPath": "index",
@@ -304,7 +457,7 @@
         "kind": 5,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "url = \"https://google.com\"\nprint(bashCommand(f\"curl https://monitor-api.vercel.app/api/public?url={url} -s\"))",
+        "peekOfCode": "url = \"https://google.com\"",
         "detail": "test",
         "documentation": {}
     }

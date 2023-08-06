@@ -4,6 +4,7 @@ import subprocess
 
 from util.py.helper import (bashCommand, CMDdig, CMDping, CMDranGenPassword, CMDtraceroute,
     downisit, GETCAT, log, GETtetrio)
+from util.py.warframeConverter import (baro, events, sortie, cetus, vallis, arbitration, steelPath, archonHunt)
 from util.py.env import loadEnv
 from test import url
 
@@ -100,6 +101,18 @@ async def tetrio(ctx, user=None):
         user = ctx.author.name
     await ctx.defer()
     await ctx.respond(GETtetrio(user))
+
+@bot.slash_command(description="Get a wf status")
+async def wf(ctx):
+    await ctx.defer()
+    await ctx.respond(f"""{baro()}
+events: {events()}
+sortie: {sortie()}
+{cetus()}
+{vallis()}
+UNSTABLE arbitration: {arbitration()}
+steelpath: {steelPath()}
+Archon Hunt: {archonHunt()}""")
 
 bot.run(env["TOKEN"])
 

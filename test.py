@@ -1,5 +1,5 @@
-from util.py.helper import log, bashCommand
+import json
+from util.py.helper import bashCommand
+from util.py.warframeConverter import *
 
 url = "https://google.com"
-
-print(bashCommand(f"curl https://monitor-api.vercel.app/api/public?url={url} -s"))
