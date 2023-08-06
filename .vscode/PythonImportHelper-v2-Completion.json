@@ -52,12 +52,84 @@
         "documentation": {}
     },
     {
-        "label": "util.py.helper",
+        "label": "baro",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "events",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "sortie",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "cetus",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "vallis",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "arbitration",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "steelPath",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "archonHunt",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "util.py.warframeConverter",
+        "description": "util.py.warframeConverter",
+        "isExtraImport": true,
+        "detail": "util.py.warframeConverter",
+        "documentation": {}
+    },
+    {
+        "label": "discord",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "detail": "util.py.helper",
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
         "documentation": {}
     },
     {
@@ -146,87 +218,6 @@
         "description": "util.py.helper",
         "isExtraImport": true,
         "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
-        "label": "baro",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "events",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "sortie",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "cetus",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "vallis",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "arbitration",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "steelPath",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "archonHunt",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "discord",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "discord",
-        "description": "discord",
-        "detail": "discord",
         "documentation": {}
     },
     {
