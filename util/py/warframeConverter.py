@@ -2,6 +2,7 @@ import json
 from util.py.helper import bashCommand
 
 def wfGet(data=None):
+    log(f"Getting {data}")
     return bashCommand(f"curl -s https://api.warframestat.us/pc/{data} -L")
 
 def baro():
