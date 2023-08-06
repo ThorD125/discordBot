@@ -337,7 +337,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "env = loadEnv()\nbot = discord.Bot()\nprint(\"Logging in...\")\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\nprint(\"Logging in...\")\n# @bot.slash_command(description=\"Pong a URL\")\n# async def ping(ctx, url=None):\n#     if url is None:",
+        "peekOfCode": "env = loadEnv()\nbot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:",
         "detail": "index",
         "documentation": {}
     },
@@ -346,7 +346,7 @@
         "kind": 5,
         "importPath": "index",
         "description": "index",
-        "peekOfCode": "bot = discord.Bot()\nprint(\"Logging in...\")\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\nprint(\"Logging in...\")\n# @bot.slash_command(description=\"Pong a URL\")\n# async def ping(ctx, url=None):\n#     if url is None:\n#         await ctx.respond(\"pong!\")",
+        "peekOfCode": "bot = discord.Bot()\n@bot.event\nasync def on_ready():\n    log(f\"We have logged in as {bot.user}\")\n@bot.slash_command(description=\"Pong a URL\")\nasync def ping(ctx, url=None):\n    if url is None:\n        await ctx.respond(\"pong!\")\n    else:\n        await ctx.defer()",
         "detail": "index",
         "documentation": {}
     },

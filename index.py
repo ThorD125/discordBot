@@ -9,25 +9,20 @@ env = loadEnv()
 
 bot = discord.Bot()
 
-print("Logging in...")
-
 
 @bot.event
 async def on_ready():
     log(f"We have logged in as {bot.user}")
 
-print("Logging in...")
 
+@bot.slash_command(description="Pong a URL")
+async def ping(ctx, url=None):
+    if url is None:
+        await ctx.respond("pong!")
+    else:
+        await ctx.defer()
+        await ctx.respond(CMDping(url))
 
-# @bot.slash_command(description="Pong a URL")
-# async def ping(ctx, url=None):
-#     if url is None:
-#         await ctx.respond("pong!")
-#     else:
-#         await ctx.defer()
-#         await ctx.respond(CMDping(url))
-
-print("Logging in...")
 
 # @bot.slash_command(description="Trace a URL")
 # async def traceroute(ctx, url=None):
@@ -116,7 +111,5 @@ print("Logging in...")
 #     log("wf")
 #     await ctx.defer()
 #     await ctx.respond(GETwf())
-print("Logging in...")
 
 bot.run(env["TOKEN"])
-print("Logging in...")

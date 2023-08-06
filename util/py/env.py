@@ -15,5 +15,4 @@ def loadEnv():
             exit(1)
         else:
             returner[key.upper()] = getKey
-    print(returner)
     return returner
