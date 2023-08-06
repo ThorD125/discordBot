@@ -1,3 +1,4 @@
+from util.py.helper import bashCommand
 
 
 def commandFilter(input):
