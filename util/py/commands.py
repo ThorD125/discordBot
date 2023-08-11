@@ -46,7 +46,7 @@ def GETtetrio(user):
         return "User not found!"
     else:
         tetrior = json.loads(tetrio).get("data").get("user")
-        return f"""```yaml
+        return f"""```
 {user}'s stats:
 XP: {tetrior.get("xp")}
 League:
@@ -58,7 +58,7 @@ League:
 
 
 def GETwf():
-    return f"""```yaml{baro()}
+    return f"""```{baro()}
 events: {events()}
 sortie: {sortie()}
 {cetus()}

@@ -353,7 +353,7 @@
         "kind": 2,
         "importPath": "util.py.commands",
         "description": "util.py.commands",
-        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml",
+        "peekOfCode": "def GETCAT():\n    return json.loads(bashCommand(\"curl https://api.thecatapi.com/v1/images/search -s\"))[0].get(\"url\")\ndef GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```",
         "detail": "util.py.commands",
         "documentation": {}
     },
@@ -362,7 +362,7 @@
         "kind": 2,
         "importPath": "util.py.commands",
         "description": "util.py.commands",
-        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```yaml\n{user}'s stats:\nXP: {tetrior.get(\"xp\")}",
+        "peekOfCode": "def GETtetrio(user):\n    user = commandFilter(user)\n    tetrio = bashCommand(f\"curl https://ch.tetr.io/api/users/{user} -s\")\n    if not json.loads(tetrio).get(\"success\"):\n        return \"User not found!\"\n    else:\n        tetrior = json.loads(tetrio).get(\"data\").get(\"user\")\n        return f\"\"\"```\n{user}'s stats:\nXP: {tetrior.get(\"xp\")}",
         "detail": "util.py.commands",
         "documentation": {}
     },
@@ -371,7 +371,7 @@
         "kind": 2,
         "importPath": "util.py.commands",
         "description": "util.py.commands",
-        "peekOfCode": "def GETwf():\n    return f\"\"\"```yaml{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\narbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}```\"\"\"",
+        "peekOfCode": "def GETwf():\n    return f\"\"\"```{baro()}\nevents: {events()}\nsortie: {sortie()}\n{cetus()}\n{vallis()}\narbitration: {arbitration()}\nsteelpath: {steelPath()}\nArchon Hunt: {archonHunt()}```\"\"\"",
         "detail": "util.py.commands",
         "documentation": {}
     },
