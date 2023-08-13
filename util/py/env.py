@@ -8,7 +8,7 @@ def loadEnv():
 
     returner = {}
 
-    for key in ["token", "serverid"]:
+    for key in ["token", "serverid", "steam_key", "url_all_games"]:
         getKey = os.getenv(key.upper())
         if getKey is None:
             log(f"Error: {key} not found in .env file.")

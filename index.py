@@ -5,6 +5,7 @@ from util.py.helper import log, bashCommand
 from util.py.env import loadEnv
 from util.py.commands import CMDping, CMDtraceroute, CMDdig, CMDranGenPassword, downisit, GETCAT, GETtetrio, GETwf
 from util.py.setup import updateSET, restartSET
+from util.py.steamgamechecker import steam_logic
 
 env = loadEnv()
 
@@ -81,6 +82,7 @@ async def help(ctx):
 - /update
 - /restart
 - /links
+- /steamsamegames
 """)
 
 
@@ -111,5 +113,11 @@ async def tetrio(ctx, user=None):
 async def wf(ctx):
     await ctx.defer()
     await ctx.respond(GETwf())
+
+
+@bot.slash_command(description="Get a list of games names that you and your friends have in common")
+async def steamsamegames(ctx, args):
+    await ctx.defer()
+    await ctx.respond(steam_logic(args.split(" ")))
 
 bot.run(env["TOKEN"])

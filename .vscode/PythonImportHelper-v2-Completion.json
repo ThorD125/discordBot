@@ -172,6 +172,31 @@
         "documentation": {}
     },
     {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "loadEnv",
+        "importPath": "util.py.env",
+        "description": "util.py.env",
+        "isExtraImport": true,
+        "detail": "util.py.env",
+        "documentation": {}
+    },
+    {
+        "label": "loadEnv",
+        "importPath": "util.py.env",
+        "description": "util.py.env",
+        "isExtraImport": true,
+        "detail": "util.py.env",
+        "documentation": {}
+    },
+    {
         "label": "bashCommand",
         "importPath": "util.py.commands",
         "description": "util.py.commands",
@@ -253,14 +278,6 @@
         "documentation": {}
     },
     {
-        "label": "loadEnv",
-        "importPath": "util.py.env",
-        "description": "util.py.env",
-        "isExtraImport": true,
-        "detail": "util.py.env",
-        "documentation": {}
-    },
-    {
         "label": "updateSET",
         "importPath": "util.py.setup",
         "description": "util.py.setup",
@@ -274,6 +291,14 @@
         "description": "util.py.setup",
         "isExtraImport": true,
         "detail": "util.py.setup",
+        "documentation": {}
+    },
+    {
+        "label": "steam_logic",
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "isExtraImport": true,
+        "detail": "util.py.steamgamechecker",
         "documentation": {}
     },
     {
@@ -380,7 +405,7 @@
         "kind": 2,
         "importPath": "util.py.env",
         "description": "util.py.env",
-        "peekOfCode": "def loadEnv():\n    load_dotenv()\n    returner = {}\n    for key in [\"token\", \"serverid\"]:\n        getKey = os.getenv(key.upper())\n        if getKey is None:\n            log(f\"Error: {key} not found in .env file.\")\n            exit(1)\n        else:\n            returner[key.upper()] = getKey",
+        "peekOfCode": "def loadEnv():\n    load_dotenv()\n    returner = {}\n    for key in [\"token\", \"serverid\", \"steam_key\", \"url_all_games\"]:\n        getKey = os.getenv(key.upper())\n        if getKey is None:\n            log(f\"Error: {key} not found in .env file.\")\n            exit(1)\n        else:\n            returner[key.upper()] = getKey",
         "detail": "util.py.env",
         "documentation": {}
     },
@@ -418,6 +443,96 @@
         "description": "util.py.setup",
         "peekOfCode": "def restartSET():\n    bashCommand(f\"./util/sh/restart.sh\")",
         "detail": "util.py.setup",
+        "documentation": {}
+    },
+    {
+        "label": "get_games",
+        "kind": 2,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "def get_games(url):\n    r = requests.get(url)\n    data = r.json()\n    try:\n        games = data['response']['games']\n        return games\n    except KeyError:\n        return []\ndef get_game_ids(games):\n    game_Ids = []",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "get_game_ids",
+        "kind": 2,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "def get_game_ids(games):\n    game_Ids = []\n    for game in games:\n        game_Ids.append(game[\"appid\"])\n    return game_Ids\ndef person_with_least_games(list_game_ids):\n    return min(list_game_ids, key=len)\ndef is_item_in_list_of_lists(item, list_of_lists):\n    return all(item in sublist for sublist in list_of_lists)\ndef get_all_games(url):",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "person_with_least_games",
+        "kind": 2,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "def person_with_least_games(list_game_ids):\n    return min(list_game_ids, key=len)\ndef is_item_in_list_of_lists(item, list_of_lists):\n    return all(item in sublist for sublist in list_of_lists)\ndef get_all_games(url):\n    r = requests.get(url)\n    data = r.json()\n    games = data['applist']['apps']\n    return games\ndef get_game_names(games):",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "is_item_in_list_of_lists",
+        "kind": 2,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "def is_item_in_list_of_lists(item, list_of_lists):\n    return all(item in sublist for sublist in list_of_lists)\ndef get_all_games(url):\n    r = requests.get(url)\n    data = r.json()\n    games = data['applist']['apps']\n    return games\ndef get_game_names(games):\n    game_names = []\n    for game in games:",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_games",
+        "kind": 2,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "def get_all_games(url):\n    r = requests.get(url)\n    data = r.json()\n    games = data['applist']['apps']\n    return games\ndef get_game_names(games):\n    game_names = []\n    for game in games:\n        game_names.append(game[\"name\"])\n    return game_names",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "get_game_names",
+        "kind": 2,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "def get_game_names(games):\n    game_names = []\n    for game in games:\n        game_names.append(game[\"name\"])\n    return game_names\ndef steam_logic(user_list):\n    list_users_games = []\n    for user_id in user_list:\n        playlist = f\"http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={steam_key}&steamid={user_id}&format=json\"\n        games = get_games(playlist)",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "steam_logic",
+        "kind": 2,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "def steam_logic(user_list):\n    list_users_games = []\n    for user_id in user_list:\n        playlist = f\"http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={steam_key}&steamid={user_id}&format=json\"\n        games = get_games(playlist)\n        list_users_games.append(games)\n    list_game_ids = []\n    for games in list_users_games:\n        game_ids = get_game_ids(games)\n        list_game_ids.append(game_ids)",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "env",
+        "kind": 5,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "env = loadEnv()\nsteam_key = env[\"STEAM_KEY\"]\nurl_all_games = env[\"URL_ALL_GAMES\"]\ndef get_games(url):\n    r = requests.get(url)\n    data = r.json()\n    try:\n        games = data['response']['games']\n        return games\n    except KeyError:",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "steam_key",
+        "kind": 5,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "steam_key = env[\"STEAM_KEY\"]\nurl_all_games = env[\"URL_ALL_GAMES\"]\ndef get_games(url):\n    r = requests.get(url)\n    data = r.json()\n    try:\n        games = data['response']['games']\n        return games\n    except KeyError:\n        return []",
+        "detail": "util.py.steamgamechecker",
+        "documentation": {}
+    },
+    {
+        "label": "url_all_games",
+        "kind": 5,
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "peekOfCode": "url_all_games = env[\"URL_ALL_GAMES\"]\ndef get_games(url):\n    r = requests.get(url)\n    data = r.json()\n    try:\n        games = data['response']['games']\n        return games\n    except KeyError:\n        return []\ndef get_game_ids(games):",
+        "detail": "util.py.steamgamechecker",
         "documentation": {}
     },
     {
