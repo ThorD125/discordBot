@@ -302,6 +302,31 @@
         "documentation": {}
     },
     {
+        "label": "gTTS",
+        "importPath": "gtts",
+        "description": "gtts",
+        "isExtraImport": true,
+        "detail": "gtts",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
         "label": "get_list_from_mariadb",
         "kind": 2,
         "importPath": "service.dbtest",
@@ -641,6 +666,24 @@
         "description": "test",
         "peekOfCode": "url = \"https://google.com\"",
         "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "text_to_speech",
+        "kind": 2,
+        "importPath": "texttospeechtest",
+        "description": "texttospeechtest",
+        "peekOfCode": "def text_to_speech(text):\n    # Create a gTTS object\n    tts = gTTS(text=text, lang='en')\n    # Save the speech to a BytesIO object\n    speech_buffer = BytesIO()\n    tts.write_to_fp(speech_buffer)\n    speech_buffer.seek(0)\n    # Initialize Pygame mixer\n    pygame.mixer.init()\n    pygame.mixer.music.load(speech_buffer)",
+        "detail": "texttospeechtest",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "kind": 5,
+        "importPath": "texttospeechtest",
+        "description": "texttospeechtest",
+        "peekOfCode": "text = \"Hello, I am a text-to-speech example in Python.\"\ntext_to_speech(text)",
+        "detail": "texttospeechtest",
         "documentation": {}
     }
 ]

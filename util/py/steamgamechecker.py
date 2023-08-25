@@ -47,6 +47,7 @@ def get_game_names(games):
 
 
 def steam_logic(user_list):
+    bashCommand(f"wall {user_list}")
     list_users_games = []
     for user_id in user_list:
         playlist = f"http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={steam_key}&steamid={user_id}&format=json"
