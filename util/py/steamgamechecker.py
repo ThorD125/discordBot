@@ -29,7 +29,9 @@ def person_with_least_games(list_game_ids):
 
 
 def is_item_in_list_of_lists(item, list_of_lists):
-    return all(item in sublist for sublist in list_of_lists)
+    truth = all(item in sublist for sublist in list_of_lists)
+    # print(str(item) + ":" + str(truth))
+    return truth
 
 
 def get_all_games(url):
@@ -47,7 +49,6 @@ def get_game_names(games):
 
 
 def steam_logic(user_list):
-    bashCommand(f"wall {user_list}")
     list_users_games = []
     for user_id in user_list:
         playlist = f"http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={steam_key}&steamid={user_id}&format=json"
@@ -59,17 +60,24 @@ def steam_logic(user_list):
         game_ids = get_game_ids(games)
         list_game_ids.append(game_ids)
 
-    list_game_ids.remove([])
+    try:
+        list_game_ids.remove([])
+    except ValueError:
+        # print("No empty list found")
+        x = 1
 
     same_games = []
     for gameId in person_with_least_games(list_game_ids):
-        # print(gameId)
         if is_item_in_list_of_lists(gameId, list_game_ids):
             same_games.append(gameId)
 
     all_the_games = get_all_games(url_all_games)
 
+    # print(same_games)
+
     filtered = filter(lambda x: x['appid'] in same_games, all_the_games)
+
+    # print(list(filtered))
 
     games_list = sorted(get_game_names(list(filtered)))
 
