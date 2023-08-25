@@ -77,7 +77,9 @@ def steam_logic(user_list):
 
     filtered = filter(lambda x: x['appid'] in same_games, all_the_games)
 
-    # print(list(filtered))
+    noName = filter(lambda x: x['appid'] in same_games, all_the_games)
+
+    print(list(filtered))
 
     games_list = sorted(get_game_names(list(filtered)))
 
