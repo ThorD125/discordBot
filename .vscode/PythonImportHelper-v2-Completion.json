@@ -74,14 +74,6 @@
         "documentation": {}
     },
     {
-        "label": "bashCommand",
-        "importPath": "util.py.helper",
-        "description": "util.py.helper",
-        "isExtraImport": true,
-        "detail": "util.py.helper",
-        "documentation": {}
-    },
-    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -148,14 +140,6 @@
     },
     {
         "label": "archonHunt",
-        "importPath": "util.py.warframeConverter",
-        "description": "util.py.warframeConverter",
-        "isExtraImport": true,
-        "detail": "util.py.warframeConverter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
         "importPath": "util.py.warframeConverter",
         "description": "util.py.warframeConverter",
         "isExtraImport": true,
@@ -291,6 +275,14 @@
         "description": "util.py.setup",
         "isExtraImport": true,
         "detail": "util.py.setup",
+        "documentation": {}
+    },
+    {
+        "label": "steam_logic",
+        "importPath": "util.py.steamgamechecker",
+        "description": "util.py.steamgamechecker",
+        "isExtraImport": true,
+        "detail": "util.py.steamgamechecker",
         "documentation": {}
     },
     {
@@ -484,7 +476,7 @@
         "kind": 2,
         "importPath": "util.py.steamgamechecker",
         "description": "util.py.steamgamechecker",
-        "peekOfCode": "def get_game_ids(games):\n    game_Ids = []\n    for game in games:\n        game_Ids.append(game[\"appid\"])\n    return game_Ids\ndef person_with_least_games(list_game_ids):\n    return min(list_game_ids, key=len)\ndef is_item_in_list_of_lists(item, list_of_lists):\n    return all(item in sublist for sublist in list_of_lists)\ndef get_all_games(url):",
+        "peekOfCode": "def get_game_ids(games):\n    game_Ids = []\n    for game in games:\n        game_Ids.append(game[\"appid\"])\n    return game_Ids\ndef person_with_least_games(list_game_ids):\n    return min(list_game_ids, key=len)\ndef is_item_in_list_of_lists(item, list_of_lists):\n    truth = all(item in sublist for sublist in list_of_lists)\n    # print(str(item) + \":\" + str(truth))",
         "detail": "util.py.steamgamechecker",
         "documentation": {}
     },
@@ -493,7 +485,7 @@
         "kind": 2,
         "importPath": "util.py.steamgamechecker",
         "description": "util.py.steamgamechecker",
-        "peekOfCode": "def person_with_least_games(list_game_ids):\n    return min(list_game_ids, key=len)\ndef is_item_in_list_of_lists(item, list_of_lists):\n    return all(item in sublist for sublist in list_of_lists)\ndef get_all_games(url):\n    r = requests.get(url)\n    data = r.json()\n    games = data['applist']['apps']\n    return games\ndef get_game_names(games):",
+        "peekOfCode": "def person_with_least_games(list_game_ids):\n    return min(list_game_ids, key=len)\ndef is_item_in_list_of_lists(item, list_of_lists):\n    truth = all(item in sublist for sublist in list_of_lists)\n    # print(str(item) + \":\" + str(truth))\n    return truth\ndef get_all_games(url):\n    r = requests.get(url)\n    data = r.json()\n    games = data['applist']['apps']",
         "detail": "util.py.steamgamechecker",
         "documentation": {}
     },
@@ -502,7 +494,7 @@
         "kind": 2,
         "importPath": "util.py.steamgamechecker",
         "description": "util.py.steamgamechecker",
-        "peekOfCode": "def is_item_in_list_of_lists(item, list_of_lists):\n    return all(item in sublist for sublist in list_of_lists)\ndef get_all_games(url):\n    r = requests.get(url)\n    data = r.json()\n    games = data['applist']['apps']\n    return games\ndef get_game_names(games):\n    game_names = []\n    for game in games:",
+        "peekOfCode": "def is_item_in_list_of_lists(item, list_of_lists):\n    truth = all(item in sublist for sublist in list_of_lists)\n    # print(str(item) + \":\" + str(truth))\n    return truth\ndef get_all_games(url):\n    r = requests.get(url)\n    data = r.json()\n    games = data['applist']['apps']\n    return games\ndef get_game_names(games):",
         "detail": "util.py.steamgamechecker",
         "documentation": {}
     },
@@ -660,11 +652,11 @@
         "documentation": {}
     },
     {
-        "label": "url",
+        "label": "args",
         "kind": 5,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "url = \"https://google.com\"",
+        "peekOfCode": "args = \"76561199002916354 76561198259056804\"\nprint(steam_logic(args.split(\" \")))",
         "detail": "test",
         "documentation": {}
     },
