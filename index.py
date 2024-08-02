@@ -14,6 +14,10 @@ bot = discord.Bot()
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
+    
+    channel = bot.get_channel("1135659681516376105")
+    await channel.send("Bot is now online!")
+
 
 @bot.command()
 async def sync(ctx):
@@ -43,6 +47,11 @@ async def wf(ctx):
 async def generatepassword(ctx, amount=20):
     await ctx.defer()
     await ctx.respond(randomPass(amount))
+
+@bot.slash_command(description="Get a random cat")
+async def cat(ctx):
+    await ctx.defer()
+    await ctx.respond(cat())
 
 @bot.slash_command(description="check steam games for steamids")
 async def steam(ctx, steam_ids_txt: str):
