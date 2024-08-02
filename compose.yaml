@@ -1,0 +1,13 @@
+name: discordbot
+services:
+  python:
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    container_name: discordbot
+    volumes:
+      - $PWD:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    image: python:3
+    command: sh -c "pip install py-cord aiohttp==3.9.0 python-dotenv requests && python index.py"
+networks: {}
