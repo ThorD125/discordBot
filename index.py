@@ -16,8 +16,11 @@ bot = discord.Bot(intents=intents)
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
-    await bot.sync_commands()
 
+@bot.command()
+async def sync(ctx):
+    await bot.sync_commands()
+    await ctx.send("Commands synced!")
 
 @bot.slash_command(description="list all commands")
 async def help(ctx):
