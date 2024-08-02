@@ -9,9 +9,7 @@ from warframe_utils import *
 
 load_dotenv()
 
-intents = discord.Intents.default()
-
-bot = discord.Bot(command_prefix="!", intents=intents)
+bot = discord.Bot()
 
 @bot.event
 async def on_ready():
@@ -19,6 +17,7 @@ async def on_ready():
 
 @bot.command()
 async def sync(ctx):
+    print("syncing commands")
     await bot.sync_commands()
     await ctx.send("Commands synced!")
 
