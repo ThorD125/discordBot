@@ -65,6 +65,7 @@ async def steam(ctx, steam_ids_txt: str):
     if not apikey:
         # await ctx.respond("API Key is missing. Please set the APIKEY environment variable.")
         return
+    await ctx.respond("You bitches all have:")
 
     steam_ids_split = steam_ids_txt.split()
     if not steam_ids_split:
@@ -94,7 +95,6 @@ async def steam(ctx, steam_ids_txt: str):
         current_message += "```"
         await ctx.send(current_message)
 
-    await ctx.respond("You bitches all have:")
 
 
 
