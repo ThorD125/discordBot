@@ -9,5 +9,5 @@ services:
       - $PWD:/usr/src/myapp
     working_dir: /usr/src/myapp
     image: python:3
-    command: sh -c "git pull && pip install py-cord aiohttp==3.9.0 python-dotenv requests && python index.py"
+    command: sh -c "pip install py-cord aiohttp==3.9.0 python-dotenv requests && python index.py"
 networks: {}
