@@ -4,7 +4,7 @@ import json
 import os
 import logging
 
-logging.basicConfig(level=logging.INFO)
+# logging.basicConfig(level=logging.INFO)
 
 def get_games(url):
     try:
