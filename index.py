@@ -16,6 +16,8 @@ bot = discord.Bot(intents=intents)
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
+    await bot.sync_commands()
+
 
 @bot.slash_command(description="list all commands")
 async def help(ctx):
@@ -39,7 +41,7 @@ async def wf(ctx):
 async def generatepassword(ctx, amount=20):
     await ctx.defer()
     await ctx.respond(randomPass(amount))
-    
+
 @bot.slash_command(description="check steam games for steamids")
 async def steam(ctx, steam_ids_txt: str):
     await ctx.defer()
