@@ -60,12 +60,12 @@ async def help(ctx):
     
 @bot.slash_command(description="check steam games for steamids")
 async def steam(ctx, steam_ids_txt: str):
+    await ctx.defer()
     print("steam command invoked")
     apikey = os.getenv("STEAM_APIKEY")
     if not apikey:
         # await ctx.respond("API Key is missing. Please set the APIKEY environment variable.")
         return
-    await ctx.respond("You bitches all have:")
 
     steam_ids_split = steam_ids_txt.split()
     if not steam_ids_split:
@@ -94,6 +94,9 @@ async def steam(ctx, steam_ids_txt: str):
     if current_message != game_text:
         current_message += "```"
         await ctx.send(current_message)
+
+    await ctx.respond("You bitches all have:")
+    
 
 
 
