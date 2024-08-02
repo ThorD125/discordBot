@@ -27,6 +27,15 @@ to be included:
 
 """)
 
+@bot.slash_command(description="Get a wf status")
+async def wf(ctx):
+    await ctx.defer()
+    await ctx.respond(getWf())
+
+@bot.slash_command(description="Generate a random password")
+async def generatepassword(ctx, amount=20):
+    await ctx.defer()
+    await ctx.respond(randomPass(amount))
     
 @bot.slash_command(description="check steam games for steamids")
 async def steam(ctx, steam_ids_txt: str):
@@ -64,16 +73,6 @@ async def steam(ctx, steam_ids_txt: str):
 
     await ctx.respond("You bitches all have:")
 
-@bot.slash_command(description="Get a wf status")
-async def wf(ctx):
-    await ctx.defer()
-    await ctx.respond(getWf())
-
-@bot.slash_command(description="Generate a random password")
-async def generatepassword(ctx, amount=20):
-    await ctx.defer()
-    await ctx.respond(randomPass(amount))
-    
 the_token = os.getenv("DISCORD_BOT_TOKEN")
 
 bot.run(the_token)
