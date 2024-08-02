@@ -1,5 +1,6 @@
 import os
 import discord
+
 from dotenv import load_dotenv
 
 from steam_game_check import *
@@ -8,7 +9,9 @@ from warframe_utils import *
 
 load_dotenv()
 
-bot = discord.Bot()
+intents = discord.Intents.default()
+
+bot = discord.Bot(intents=intents)
 
 @bot.event
 async def on_ready():
