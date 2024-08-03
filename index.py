@@ -49,7 +49,7 @@ async def generatepassword(ctx, amount: int=20):
 async def cat(ctx):
     print("cat")
     await ctx.defer()
-    theCat = await cat()
+    theCat = cat()
     await ctx.respond(theCat)
 
 @bot.slash_command(description="check steam games for steamids")
