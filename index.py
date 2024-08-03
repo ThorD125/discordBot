@@ -35,23 +35,26 @@ async def help(ctx):
 
 @bot.slash_command(description="Get a wf status")
 async def wf(ctx):
+    print("wf")
     await ctx.defer()
     await ctx.respond(getWf())
 
 @bot.slash_command(description="Generate a random password")
 async def generatepassword(ctx, amount=20):
+    print("generatepassword")
     await ctx.defer()
     await ctx.respond(randomPass(amount))
 
 @bot.slash_command(description="Get a random cat")
 async def cat(ctx):
+    print("cat")
     await ctx.defer()
     await ctx.respond(cat())
 
 @bot.slash_command(description="check steam games for steamids")
 async def steam(ctx, steam_ids_txt: str):
     await ctx.defer()
-    print("steam command invoked")
+    print("steam")
     apikey = os.getenv("STEAM_APIKEY")
     if not apikey:
         return
