@@ -14,16 +14,12 @@ bot = discord.Bot()
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
-    
-    await client.get_channel(1135659681516376105).send("bot is online")
-
-
 
 @bot.command()
 async def sync(ctx):
     print("syncing commands")
     await bot.sync_commands()
-    await ctx.send("Commands synced!")
+    await ctx.respond("Commands synced!")
 
 @bot.slash_command(description="list all commands")
 async def help(ctx):
@@ -32,10 +28,9 @@ async def help(ctx):
 - /help
 - /steam "id1 name1 id2 name2 id3 name3 ..."
 - /wf
-
-to be included:
+- /sync
+- /cat
 - /generatepassword
-
 """)
 
 @bot.slash_command(description="Get a wf status")
