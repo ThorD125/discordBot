@@ -15,8 +15,8 @@ bot = discord.Bot()
 async def on_ready():
     print(f"We have logged in as {bot.user}")
     
-    channel = bot.get_channel(1135659681516376105)
-    await channel.send("Bot is now online!")
+    await client.get_channel(1135659681516376105).send("bot is online")
+
 
 
 @bot.command()
