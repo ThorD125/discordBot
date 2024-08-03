@@ -40,7 +40,7 @@ async def wf(ctx):
     await ctx.respond(getWf())
 
 @bot.slash_command(description="Generate a random password")
-async def generatepassword(ctx, amount=20):
+async def generatepassword(ctx, amount: int=20):
     print("generatepassword")
     await ctx.defer()
     await ctx.respond(randomPass(amount))
