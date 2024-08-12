@@ -14,11 +14,15 @@ bot = discord.Bot()
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
+    await bot.sync_commands(force=True)
+    print("Slash commands re-registered.")
+
 
 @bot.command()
 async def sync(ctx):
     print("syncing commands")
-    await bot.sync_commands()
+    await ctx.defer()
+    await bot.sync_commands(force=True)
     await ctx.respond("Commands synced!")
 
 @bot.slash_command(description="list all commands")
@@ -31,6 +35,7 @@ async def help(ctx):
 - /sync
 - /cat
 - /generatepassword
+- /ping "test"
 """)
 
 @bot.slash_command(description="Get a wf status")
@@ -39,11 +44,11 @@ async def wf(ctx):
     await ctx.defer()
     await ctx.respond(getWf())
 
-@bot.slash_command(description="Generate a random password")
-async def generatepassword(ctx, amount: int=20):
-    print("generatepassword")
+@bot.slash_command(description="Ping -> Pong")
+async def ping(ctx, message: str):
+    print("ping")
     await ctx.defer()
-    await ctx.respond(randomPass(amount))
+    await ctx.respond(f"Pong! {message}")
 
 @bot.slash_command(description="Get a random cat")
 async def cat(ctx):
